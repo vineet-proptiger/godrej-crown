@@ -1,0 +1,106 @@
+'use client'
+import React from 'react'
+
+const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
+const F_SANS = 'var(--font-sans), Open Sans, sans-serif'
+
+const rows = [
+  { type: '3 BHK',                    size: '1857 SQ. FT.* ONWARDS', price: '4.50 CR* ONWARDS' },
+  { type: '3 BHK XL',                 size: '1993 SQ. FT.* ONWARDS', price: 'ON REQUEST' },
+  { type: '4 BHK + U',                size: '2777 SQ. FT.* ONWARDS', price: 'ON REQUEST' },
+  { type: '3 BHK + U (PRESIDENTIAL)', size: '2514 SQ. FT.* ONWARDS', price: 'ON REQUEST' },
+  { type: '4 BHK + U (PRESIDENTIAL)', size: '3415 SQ. FT.* ONWARDS', price: 'ON REQUEST' },
+]
+
+const Pricing = ({ setIsOpen }) => (
+  <section id="pricing" style={{ padding: '72px 0', background: '#1a1a1a' }}>
+    <div className="max-w-5xl mx-auto px-4 md:px-8">
+
+      {/* Heading */}
+      <h2
+        data-aos="fade-up"
+        style={{
+          fontFamily: F_JOST, fontWeight: '800',
+          fontSize: 'clamp(28px,4vw,40px)',
+          color: '#ffffff', textAlign: 'center',
+          textTransform: 'uppercase', letterSpacing: '0.04em',
+          margin: '0 0 48px',
+        }}
+      >
+        PRICE LIST
+      </h2>
+
+      {/* Table */}
+      <div data-aos="fade-up" style={{ overflowX: 'auto' }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: '600px', border: '2px solid #888888' }}>
+          <thead>
+            <tr style={{ background: '#0d0d0d' }}>
+              {['TYPE', 'SIZES', 'PRICE', 'UNLOCK OFFERS'].map((col, i) => (
+                <th key={i} style={{
+                  fontFamily: F_JOST, fontWeight: '700', fontSize: '13px',
+                  color: '#C4952A', letterSpacing: '0.12em',
+                  textTransform: 'uppercase', textAlign: 'center',
+                  padding: '20px 16px',
+                  border: '2px solid #888888',
+                }}>
+                  {col}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((row, i) => (
+              <tr key={i} style={{ background: i % 2 === 0 ? '#1a1a1a' : '#252525' }}>
+                <td style={{
+                  fontFamily: F_JOST, fontWeight: '600', fontSize: '14px',
+                  color: '#ffffff', textAlign: 'center', padding: '18px 16px',
+                  border: '2px solid #888888',
+                  letterSpacing: '0.02em',
+                }}>
+                  {row.type}
+                </td>
+                <td style={{
+                  fontFamily: F_SANS, fontSize: '13px',
+                  color: '#cccccc', textAlign: 'center', padding: '18px 16px',
+                  border: '2px solid #888888',
+                  letterSpacing: '0.04em',
+                }}>
+                  {row.size}
+                </td>
+                <td style={{
+                  fontFamily: F_JOST, fontWeight: '600', fontSize: '14px',
+                  color: '#cccccc', textAlign: 'center', padding: '18px 16px',
+                  border: '2px solid #888888',
+                  letterSpacing: '0.04em',
+                }}>
+                  {row.price}
+                </td>
+                <td style={{
+                  textAlign: 'center', padding: '14px 16px',
+                  border: '2px solid #888888',
+                }}>
+                  <button
+                    onClick={() => setIsOpen(true)}
+                    className="btn-gold"
+                    style={{ padding: '9px 20px', fontSize: '12px', letterSpacing: '0.08em' }}
+                  >
+                    ENQUIRE NOW
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <p data-aos="fade-up" style={{
+        fontFamily: F_SANS, fontSize: '12px',
+        color: '#666', textAlign: 'center', marginTop: '20px', letterSpacing: '0.02em',
+      }}>
+        * Prices are subject to change. Government taxes & charges extra as applicable.
+      </p>
+    </div>
+  </section>
+)
+
+export default Pricing
