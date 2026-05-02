@@ -213,10 +213,9 @@ const Amenities = ({ setIsOpen }) => {
           <div style={{
             flex: 1,
             display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
             gap: '16px',
           }}
-            className="grid-cols-1 sm:grid-cols-3">
+            className="grid grid-cols-1 sm:grid-cols-3">
             {visible.map((item, i) => (
               <AmenityCard key={`${start}-${i}`} item={item} index={i} start={start} />
             ))}

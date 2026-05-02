@@ -30,8 +30,53 @@ const Pricing = ({ setIsOpen }) => (
         PRICE LIST
       </h2>
 
-      {/* Table */}
-      <div data-aos="fade-up" style={{ overflowX: 'auto' }}>
+      {/* ── Mobile: Cards (hidden on md+) ── */}
+      <div className="flex flex-col gap-4 md:hidden">
+        {rows.map((row, i) => (
+          <div
+            key={i}
+            data-aos="fade-up"
+            style={{
+              background: '#222222',
+              border: '2px solid #888888',
+              borderRadius: '4px',
+              padding: '20px 18px',
+            }}
+          >
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '10px' }}>
+              <span style={{
+                fontFamily: F_JOST, fontWeight: '700', fontSize: '15px',
+                color: '#ffffff', letterSpacing: '0.02em',
+              }}>
+                {row.type}
+              </span>
+              <span style={{
+                fontFamily: F_JOST, fontWeight: '700', fontSize: '14px',
+                color: '#C4952A', letterSpacing: '0.04em', textAlign: 'right',
+              }}>
+                {row.price}
+              </span>
+            </div>
+            <p style={{
+              fontFamily: F_SANS, fontSize: '12px',
+              color: '#aaaaaa', letterSpacing: '0.04em',
+              margin: '0 0 16px',
+            }}>
+              {row.size}
+            </p>
+            <button
+              onClick={() => setIsOpen(true)}
+              className="btn-gold"
+              style={{ width: '100%', padding: '10px', fontSize: '12px', letterSpacing: '0.08em' }}
+            >
+              ENQUIRE NOW
+            </button>
+          </div>
+        ))}
+      </div>
+
+      {/* ── Desktop: Table (hidden below md) ── */}
+      <div className="hidden md:block" data-aos="fade-up" style={{ overflowX: 'auto' }}>
         <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: '600px', border: '2px solid #888888' }}>
           <thead>
             <tr style={{ background: '#0d0d0d' }}>
@@ -54,31 +99,25 @@ const Pricing = ({ setIsOpen }) => (
                 <td style={{
                   fontFamily: F_JOST, fontWeight: '600', fontSize: '14px',
                   color: '#ffffff', textAlign: 'center', padding: '18px 16px',
-                  border: '2px solid #888888',
-                  letterSpacing: '0.02em',
+                  border: '2px solid #888888', letterSpacing: '0.02em',
                 }}>
                   {row.type}
                 </td>
                 <td style={{
                   fontFamily: F_SANS, fontSize: '13px',
                   color: '#cccccc', textAlign: 'center', padding: '18px 16px',
-                  border: '2px solid #888888',
-                  letterSpacing: '0.04em',
+                  border: '2px solid #888888', letterSpacing: '0.04em',
                 }}>
                   {row.size}
                 </td>
                 <td style={{
                   fontFamily: F_JOST, fontWeight: '600', fontSize: '14px',
                   color: '#cccccc', textAlign: 'center', padding: '18px 16px',
-                  border: '2px solid #888888',
-                  letterSpacing: '0.04em',
+                  border: '2px solid #888888', letterSpacing: '0.04em',
                 }}>
                   {row.price}
                 </td>
-                <td style={{
-                  textAlign: 'center', padding: '14px 16px',
-                  border: '2px solid #888888',
-                }}>
+                <td style={{ textAlign: 'center', padding: '14px 16px', border: '2px solid #888888' }}>
                   <button
                     onClick={() => setIsOpen(true)}
                     className="btn-gold"

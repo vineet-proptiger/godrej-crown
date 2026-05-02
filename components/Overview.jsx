@@ -199,7 +199,7 @@ const Overview = () => (
           </div>
 
           {/* Form */}
-          <div style={{
+          {/* <div style={{
             background: '#fff', borderRadius: '8px',
             border: '1px solid #e5e7eb',
             boxShadow: '0 4px 20px rgba(0,0,0,0.06)',
@@ -222,7 +222,7 @@ const Overview = () => (
             <div style={{ padding: '20px' }}>
               <EarlyForm />
             </div>
-          </div>
+          </div> */}
         </div>
 
       </div>

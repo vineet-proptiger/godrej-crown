@@ -7,14 +7,14 @@ const PHONE = '9899055893'
 const PHONE_DISPLAY = '9899 055 893'
 
 const navLinks = [
-  { name: 'HOME',        href: '#' },
-  { name: 'OVERVIEW',   href: '#overview' },
+  { name: 'HOME', href: '#' },
+  { name: 'OVERVIEW', href: '#overview' },
   { name: 'HIGHLIGHTS', href: '#highlights' },
-  { name: 'GALLERY',    href: '#gallery' },
+  { name: 'GALLERY', href: '#gallery' },
   { name: 'PRICE LIST', href: '#pricing' },
-  { name: 'AMENITIES',  href: '#amenities' },
-  { name: 'LOCATION',   href: '#location' },
-  { name: 'FLOOR PLANS',href: '#masterplan' },
+  { name: 'AMENITIES', href: '#amenities' },
+  { name: 'LOCATION', href: '#location' },
+  { name: 'FLOOR PLANS', href: '#masterplan' },
 ]
 
 const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
@@ -22,20 +22,23 @@ const F_SANS = 'var(--font-sans), Open Sans, sans-serif'
 
 const Navbar = ({ setIsOpen }) => {
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [scrolled, setScrolled]     = useState(false)
+  const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 10)
+    const onScroll = () => setScrolled(window.scrollY > 80)
+    onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 transition-shadow duration-300"
+      className="fixed top-0 left-0 right-0 z-50"
       style={{
-        background: '#1a1a1a',
-        boxShadow: scrolled ? '0 2px 16px rgba(0,0,0,0.4)' : 'none',
+        background: (scrolled || mobileOpen) ? 'rgba(26,26,26,1)' : 'rgba(26,26,26,0)',
+        borderBottom: (scrolled || mobileOpen) ? '1px solid #2a2a2a' : '1px solid transparent',
+        boxShadow: scrolled ? '0 2px 16px rgba(0,0,0,0.5)' : 'none',
+        transition: 'background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease',
       }}
     >
       <div className="container mx-auto px-4 md:px-8">
@@ -51,23 +54,23 @@ const Navbar = ({ setIsOpen }) => {
           </a>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-5">
+          <div className="hidden lg:flex items-center gap-8">
             {navLinks.map(link => (
               <a
                 key={link.name}
                 href={link.href}
                 style={{
                   fontFamily: F_JOST,
-                  fontSize: '12px',
-                  fontWeight: '600',
-                  color: '#cccccc',
-                  letterSpacing: '0.06em',
+                  fontSize: '14px',
+                  fontWeight: '700',
+                  color: '#ffffff',
+                  letterSpacing: '0.03em',
                   textTransform: 'uppercase',
                   transition: 'color 0.2s',
                   position: 'relative',
                 }}
                 onMouseEnter={e => (e.target.style.color = '#C4952A')}
-                onMouseLeave={e => (e.target.style.color = '#cccccc')}
+                onMouseLeave={e => (e.target.style.color = '#ffffff')}
               >
                 {link.name}
               </a>
@@ -124,16 +127,16 @@ const Navbar = ({ setIsOpen }) => {
                 display: 'block',
                 padding: '14px 24px',
                 fontFamily: F_JOST,
-                fontSize: '13px',
-                fontWeight: '600',
-                color: '#cccccc',
-                letterSpacing: '0.06em',
+                fontSize: '14px',
+                fontWeight: '700',
+                color: '#ffffff',
+                letterSpacing: '0.04em',
                 textTransform: 'uppercase',
                 borderBottom: '1px solid #1f1f1f',
                 transition: 'color 0.2s, background 0.2s',
               }}
               onMouseEnter={e => { e.currentTarget.style.color = '#C4952A'; e.currentTarget.style.background = '#1f1f1f' }}
-              onMouseLeave={e => { e.currentTarget.style.color = '#cccccc'; e.currentTarget.style.background = 'transparent' }}
+              onMouseLeave={e => { e.currentTarget.style.color = '#ffffff'; e.currentTarget.style.background = 'transparent' }}
             >
               {link.name}
             </a>

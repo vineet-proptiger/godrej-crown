@@ -9,85 +9,143 @@
    ═══════════════════════════════════════════════════════════════ */
 :root {
   /* ── Gold Accent Palette ── */
-  --color-gold:       #C4952A;
+  --color-gold: #C4952A;
   --color-gold-light: #D4A843;
-  --color-gold-dark:  #9A7518;
-  --color-gold-bg:    #FDF8EE;
+  --color-gold-dark: #9A7518;
+  --color-gold-bg: #FDF8EE;
 
   /* ── Primary (same as gold) ── */
-  --color-primary:       #C4952A;
+  --color-primary: #C4952A;
   --color-primary-light: #D4A843;
-  --color-primary-dark:  #9A7518;
+  --color-primary-dark: #9A7518;
 
   /* ── Dark backgrounds ── */
-  --color-dark:     #1a1a1a;
+  --color-dark: #1a1a1a;
   --color-dark-mid: #2a2a2a;
 
   /* ── Backgrounds ── */
-  --color-bg:       #ffffff;
+  --color-bg: #ffffff;
   --color-bg-light: #f5f5f5;
   --color-bg-muted: #f8f8f8;
 
   /* ── Text ── */
-  --color-text:       #1a1a1a;
-  --color-text-mid:   #333333;
+  --color-text: #1a1a1a;
+  --color-text-mid: #333333;
   --color-text-light: #666666;
 
   /* ── UI ── */
-  --btn-radius:      4px;
+  --btn-radius: 4px;
   --btn-radius-pill: 4px;
 
   /* ── Shadows ── */
-  --shadow-sm:   0 2px 8px  rgba(0,0,0,0.08);
-  --shadow-md:   0 8px 24px rgba(0,0,0,0.12);
-  --shadow-lg:   0 20px 48px rgba(0,0,0,0.16);
-  --shadow-card: 0 4px 20px rgba(0,0,0,0.07);
-  --color-shadow-inner: rgba(196,149,42,0.15);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.16);
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.07);
+  --color-shadow-inner: rgba(196, 149, 42, 0.15);
 }
 
 /* ─── Keyframes ─────────────────────────────────────────────── */
 @keyframes priceBtn {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @keyframes blinkPrice {
-  0%, 49%  { opacity: 1; }
-  50%, 100% { opacity: 0; }
+
+  0%,
+  49% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(24px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes pulseGlow {
-  0%, 100% { box-shadow: 0 0 0 0   rgba(196,149,42,0.45); }
-  50%       { box-shadow: 0 0 0 12px rgba(196,149,42,0); }
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(196, 149, 42, 0.45);
+  }
+
+  50% {
+    box-shadow: 0 0 0 12px rgba(196, 149, 42, 0);
+  }
 }
 
 @keyframes slideInRight {
-  from { opacity: 0; transform: scale(0.92) translateY(16px); }
-  to   { opacity: 1; transform: scale(1)    translateY(0); }
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
 
 @keyframes shimmer {
-  0%   { background-position: -200% center; }
-  100% { background-position:  200% center; }
+  0% {
+    background-position: -200% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
 }
 
 @keyframes borderPulse {
-  0%, 100% { border-color: rgba(196,149,42,0.4); }
-  50%       { border-color: rgba(196,149,42,1); }
+
+  0%,
+  100% {
+    border-color: rgba(196, 149, 42, 0.4);
+  }
+
+  50% {
+    border-color: rgba(196, 149, 42, 1);
+  }
 }
 
 /* ─── Utility classes ────────────────────────────────────────── */
-.blink-price        { animation: blinkPrice 0.9s step-end infinite; }
-.fade-up            { animation: fadeUp 0.7s ease forwards; }
-.pulse-glow         { animation: pulseGlow 2s ease-in-out infinite; }
+.blink-price {
+  animation: blinkPrice 0.9s step-end infinite;
+}
+
+.fade-up {
+  animation: fadeUp 0.7s ease forwards;
+}
+
+.pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
 .price-btn-animated {
-  background: linear-gradient(270deg,var(--color-gold),var(--color-gold-dark),var(--color-gold-light),var(--color-gold));
+  background: linear-gradient(270deg, var(--color-gold), var(--color-gold-dark), var(--color-gold-light), var(--color-gold));
   background-size: 300% 300%;
   animation: priceBtn 4s ease infinite;
   color: #fff;
@@ -96,7 +154,12 @@
 
 /* ─── Base ───────────────────────────────────────────────────── */
 @layer base {
-  *, *::before, *::after { box-sizing: border-box; }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
 
   html {
     scroll-behavior: smooth;
@@ -111,27 +174,51 @@
     overflow-x: hidden;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-jost), 'Montserrat', sans-serif;
     font-weight: 700;
     letter-spacing: 0.01em;
   }
 
-  img     { max-width: 100%; display: block; }
-  button  { cursor: pointer; }
-  a       { text-decoration: none; color: inherit; }
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 
   /* ── Gold scrollbar ── */
-  ::-webkit-scrollbar       { width: 5px; }
-  ::-webkit-scrollbar-track { background: #f5f5f5; }
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f5f5f5;
+  }
+
   ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg,var(--color-gold),var(--color-gold-dark));
+    background: linear-gradient(180deg, var(--color-gold), var(--color-gold-dark));
     border-radius: 4px;
   }
-  ::-webkit-scrollbar-thumb:hover { background: var(--color-gold-dark); }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gold-dark);
+  }
 
   ::selection {
-    background: rgba(196,149,42,0.18);
+    background: rgba(196, 149, 42, 0.18);
     color: var(--color-gold-dark);
   }
 }
@@ -165,22 +252,30 @@
   .btn-gold::before {
     content: '';
     position: absolute;
-    top: 0; left: -75%;
-    width: 50%; height: 100%;
-    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.22), transparent);
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.22), transparent);
     transform: skewX(-20deg);
     transition: left 0.5s ease;
   }
-  .btn-gold:hover::before { left: 130%; }
+
+  .btn-gold:hover::before {
+    left: 130%;
+  }
 
   .btn-gold:hover {
     background: #fff !important;
     color: var(--color-gold) !important;
     border-color: var(--color-gold);
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(196,149,42,0.25);
+    box-shadow: 0 8px 20px rgba(196, 149, 42, 0.25);
   }
-  .btn-gold:active { transform: translateY(0); }
+
+  .btn-gold:active {
+    transform: translateY(0);
+  }
 
   /* ══ OUTLINED ══ */
   .btn-gold-outline {
@@ -201,6 +296,7 @@
     gap: 8px;
     text-transform: uppercase;
   }
+
   .btn-gold-outline:hover {
     background: var(--color-gold) !important;
     color: #fff !important;
@@ -226,6 +322,7 @@
     gap: 8px;
     text-transform: uppercase;
   }
+
   .btn-primary:hover {
     background: var(--color-gold) !important;
     border-color: var(--color-gold);
@@ -245,8 +342,9 @@
     padding: 16px 10px;
     font-size: 12px;
     letter-spacing: 0.08em;
-    box-shadow: -4px 0 18px rgba(0,0,0,0.2);
+    box-shadow: -4px 0 18px rgba(0, 0, 0, 0.2);
   }
+
   .btn-floating-tab:hover {
     transform: translateY(calc(-50% - 3px)) !important;
     background: #fff !important;
@@ -276,11 +374,15 @@
     font-family: var(--font-sans), 'Open Sans', sans-serif;
     transition: border-color 0.25s, box-shadow 0.25s;
   }
+
   .form-input:focus {
     border-color: var(--color-gold);
-    box-shadow: 0 0 0 3px rgba(196,149,42,0.12);
+    box-shadow: 0 0 0 3px rgba(196, 149, 42, 0.12);
   }
-  .form-input::placeholder { color: #9ca3af; }
+
+  .form-input::placeholder {
+    color: #9ca3af;
+  }
 
   /* ══ GALLERY ITEM ══ */
   .gallery-item {
@@ -289,9 +391,19 @@
     border-radius: 4px;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
   }
-  .gallery-item:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
-  .gallery-item img { transition: transform 0.45s ease; }
-  .gallery-item:hover img { transform: scale(1.06); }
+
+  .gallery-item:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+  }
+
+  .gallery-item img {
+    transition: transform 0.45s ease;
+  }
+
+  .gallery-item:hover img {
+    transform: scale(1.06);
+  }
 
   /* ══ PRICING CARD ══ */
   .pricing-card {
@@ -303,25 +415,36 @@
     position: relative;
     overflow: hidden;
   }
-  .pricing-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+
+  .pricing-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+  }
 }
 
 /* ─── Responsive Section Padding ────────────────────────────── */
 @media (max-width: 640px) {
-  section { padding-top: 40px !important; padding-bottom: 40px !important; }
-  .container { padding-left: 16px !important; padding-right: 16px !important; }
+  section {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
 }
 
-/* ─── Navbar ─────────────────────────────────────────────────── */
-nav.fixed {
+/* ─── Navbar (Transparency handled in Navbar.jsx) ────────────── */
+/* nav.fixed {
   background: #1a1a1a !important;
   backdrop-filter: none;
   border-bottom: 1px solid #2a2a2a;
-}
+} */
 
 /* ─── Focus ring ─────────────────────────────────────────────── */
 *:focus-visible {
-  outline: 2px solid rgba(196,149,42,0.5);
+  outline: 2px solid rgba(196, 149, 42, 0.5);
   outline-offset: 3px;
   border-radius: 4px;
 }
@@ -329,11 +452,16 @@ nav.fixed {
 /* ─── Mobile sticky bar ──────────────────────────────────────── */
 .sticky-bottom-bar {
   position: fixed;
-  bottom: 0; left: 0; right: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   z-index: 999;
   display: flex;
-  box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
 }
+
 @media (min-width: 1024px) {
-  .sticky-bottom-bar { display: none; }
+  .sticky-bottom-bar {
+    display: none;
+  }
 }

@@ -10,9 +10,9 @@ const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
 const fieldStyle = {
   width: '100%',
   background: 'transparent',
-  border: 'none',
-  borderBottom: '1px solid #444',
-  padding: '10px 0',
+  border: '1px solid rgba(255,255,255,0.3)',
+  borderRadius: '3px',
+  padding: '11px 14px',
   color: '#fff',
   fontSize: '14px',
   fontFamily: F_SANS,
@@ -24,7 +24,7 @@ const EnquireModal = ({ isOpen, setIsOpen }) => {
   const autoTriggered = useRef(false)
   const intervalRef = useRef(null)
 
-  const [form, setForm] = useState({ fullname: '', email: '', phone: '', message: '' })
+  const [form, setForm] = useState({ fullname: '', email: '', phone: '' })
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
   const [error, setError] = useState('')
@@ -75,7 +75,7 @@ const EnquireModal = ({ isOpen, setIsOpen }) => {
     payload.append('fullname', form.fullname)
     payload.append('email', form.email)
     payload.append('phone', form.phone)
-    payload.append('message', form.message)
+    payload.append('message', '')
     payload.append('website', '')          // honeypot — keep empty
     payload.append('projectId', PROJECT_ID)
     payload.append('projectName', PROJECT_NAME)
@@ -125,6 +125,7 @@ const EnquireModal = ({ isOpen, setIsOpen }) => {
           width: '100%',
           maxWidth: '480px',
           borderRadius: '4px',
+          border: '2px solid rgba(255,255,255,0.55)',
           position: 'relative',
           padding: '36px 28px 28px',
           maxHeight: '95vh',
@@ -194,43 +195,24 @@ const EnquireModal = ({ isOpen, setIsOpen }) => {
             <div style={{ marginBottom: '20px' }}>
               <input
                 name="email" type="email" value={form.email} onChange={handle}
-                placeholder="Enter your email"
+                placeholder="Enter your email (Optional)"
                 style={fieldStyle}
               />
             </div>
 
-            {/* Phone with +91 prefix */}
-            <div style={{
-              display: 'flex', alignItems: 'center',
-              borderBottom: '1px solid #444', marginBottom: '20px',
-            }}>
-              <span style={{
-                color: '#ccc', fontFamily: F_SANS, fontSize: '14px',
-                paddingBottom: '10px', paddingRight: '8px',
-                display: 'flex', alignItems: 'center', gap: '5px',
-                flexShrink: 0, whiteSpace: 'nowrap', lineHeight: 1,
-              }}>
-              </span>
+            {/* Phone */}
+            <div style={{ marginBottom: '20px' }}>
               <input
                 name="phone" required value={form.phone} onChange={handle}
                 placeholder="Enter your phone number" maxLength={10}
-                style={{ ...fieldStyle, borderBottom: 'none', flex: 1 }}
-              />
-            </div>
-            {/* Message */}
-            <div style={{ marginBottom: '28px' }}>
-              <textarea
-                name="message" value={form.message} onChange={handle}
-                placeholder="Message"
-                rows={2}
-                style={{ ...fieldStyle, resize: 'none', paddingTop: '10px' }}
+                style={fieldStyle}
               />
             </div>
 
             {error && (
               <p style={{
                 color: '#f87171', fontSize: '12px', fontFamily: F_SANS,
-                marginBottom: '14px', marginTop: '-14px',
+                marginBottom: '14px',
               }}>
                 {error}
               </p>

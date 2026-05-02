@@ -59,12 +59,12 @@ const Hero = ({ setIsOpen }) => {
 
       {/* ── Center-bottom text ── */}
       <div style={{
-        position: 'absolute', bottom: '120px', left: 0, right: 0,
+        position: 'absolute', bottom: '160px', left: 0, right: 0,
         zIndex: 2, textAlign: 'center', padding: '0 16px',
       }}>
         <h1 style={{
           fontFamily: F_JOST,
-          fontSize: 'clamp(32px, 5.5vw, 68px)',
+          fontSize: 'clamp(22px, 3.2vw, 46px)',
           fontWeight: '800',
           color: '#ffffff',
           margin: '0 0 6px',
@@ -106,7 +106,7 @@ const Hero = ({ setIsOpen }) => {
 
       {/* ── Dot indicators ── */}
       <div style={{
-        position: 'absolute', bottom: '88px', left: '50%',
+        position: 'absolute', bottom: '110px', left: '50%',
         transform: 'translateX(-50%)', zIndex: 3,
         display: 'flex', gap: '8px',
       }}>
@@ -127,36 +127,46 @@ const Hero = ({ setIsOpen }) => {
 
       {/* ── Bottom info bar ── */}
       <div style={{
-        position: 'absolute', bottom: 0, left: 0, right: 0, zIndex: 2,
-        background: 'rgba(26,26,26,0.92)',
-        display: 'grid', gridTemplateColumns: '1fr 1fr 1fr',
-        borderTop: '1px solid rgba(196,149,42,0.3)',
+        position: 'absolute', bottom: 0, left: 0, right: 0, zIndex: 5,
       }}>
-        {[
-          'UNDER CONSTRUCTION',
-          '3 & 4 BHK APARTMENTS',
-          '₹ 4.50 CR* ONWARDS',
-        ].map((text, i) => (
-          <div
-            key={i}
-            style={{
-              textAlign: 'center',
-              padding: '18px 12px',
-              borderRight: i < 2 ? '1px solid rgba(255,255,255,0.1)' : 'none',
-            }}
-          >
-            <span style={{
-              fontFamily: F_JOST,
-              fontSize: 'clamp(11px, 2vw, 15px)',
-              fontWeight: '700',
-              color: '#ffffff',
-              letterSpacing: '0.06em',
-              textTransform: 'uppercase',
-            }}>
-              {text}
-            </span>
-          </div>
-        ))}
+        <div style={{
+          background: 'linear-gradient(135deg, rgba(26,26,26,0.95) 0%, rgba(38,38,38,0.85) 100%)',
+          backdropFilter: 'blur(12px)',
+          display: 'grid', gridTemplateColumns: '1fr 1fr 1fr',
+          borderTop: '1px solid rgba(255,255,255,0.15)',
+          borderRadius: '16px 16px 0 0',
+          boxShadow: '0 -10px 40px rgba(0,0,0,0.5)',
+          overflow: 'hidden',
+          margin: '0 auto',
+          maxWidth: '1200px',
+        }}>
+          {[
+            'UNDER CONSTRUCTION',
+            '3 & 4 BHK APARTMENTS',
+            '₹ 4.50 CR* ONWARDS',
+          ].map((text, i) => (
+            <div
+              key={i}
+              style={{
+                textAlign: 'center',
+                padding: '24px 12px',
+                borderRight: i < 2 ? '1px solid rgba(255,255,255,0.1)' : 'none',
+              }}
+            >
+              <span style={{
+                fontFamily: F_JOST,
+                fontSize: 'clamp(11px, 1.8vw, 16px)',
+                fontWeight: '700',
+                color: '#ffffff',
+                letterSpacing: '0.04em',
+                textTransform: 'uppercase',
+                textShadow: '0 1px 4px rgba(0,0,0,0.3)',
+              }}>
+                {text}
+              </span>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )

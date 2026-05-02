@@ -141,8 +141,8 @@ const DownloadCard = ({ doc, setIsOpen }) => {
 
 const Downloads = ({ setIsOpen }) => (
   <section id="downloads" style={{ padding: '72px 0', background: '#111111' }}>
-    {/* Full width — no max-width container */}
-    <div style={{ padding: '0 clamp(16px, 4vw, 48px)' }}>
+    {/* Truly Full width */}
+    <div style={{ width: '100%', padding: '0' }}>
 
       {/* Heading */}
       <h2
@@ -158,14 +158,14 @@ const Downloads = ({ setIsOpen }) => (
         DOWNLOADS
       </h2>
 
-      {/* 4 cards — full width grid */}
+      {/* 4 cards — full width grid with gaps */}
       <div
-        style={{
+        style={{ 
           display: 'grid',
-          gridTemplateColumns: 'repeat(4, 1fr)',
-          gap: '0',
+          gap: '16px',
+          padding: '0 16px' // small edge padding so it's not literally touching the screen edge
         }}
-        className="grid-cols-2 lg:grid-cols-4"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
         data-aos="fade-up"
       >
         {docs.map((doc, i) => (

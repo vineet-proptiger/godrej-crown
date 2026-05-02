@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { masterplanImages } from '../lib/images'
 
@@ -19,6 +19,14 @@ const MasterPlan = ({ setIsOpen }) => {
   // show 2 at a time
   const pairs = []
   for (let i = 0; i < plans.length; i += 2) pairs.push([plans[i], plans[i + 1]].filter(Boolean))
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setPage(prev => (prev + 1) % pairs.length)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [pairs.length])
+
   const current = pairs[page] || pairs[0]
 
   return (
@@ -39,59 +47,76 @@ const MasterPlan = ({ setIsOpen }) => {
           FLOOR PLANS
         </h2>
 
-        {/* Two side-by-side floor plans */}
-        <div
-          style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '20px' }}
-          className="grid-cols-1 sm:grid-cols-2"
-          data-aos="fade-up"
-        >
-          {current.map((plan, i) => (
-            <div
-              key={i}
-              onClick={() => setIsOpen(true)}
-              style={{
-                position: 'relative',
-                aspectRatio: '4/3',
-                border: '1px solid #e5e7eb',
-                borderRadius: '4px',
-                overflow: 'hidden',
-                cursor: 'pointer',
-              }}
-            >
-              {/* Blurred floor plan image */}
-              <Image
-                src={plan.img} alt={plan.label} fill
-                className="object-cover"
-                style={{ filter: 'blur(6px)', transform: 'scale(1.06)' }}
-                sizes="(max-width:768px) 100vw, 50vw"
-              />
+        {/* Sliding Carousel Wrapper */}
+        <div style={{ overflow: 'hidden', margin: '0 -10px' }} data-aos="fade-up">
+          <div
+            style={{
+              display: 'flex',
+              transition: 'transform 0.7s cubic-bezier(0.4, 0, 0.2, 1)',
+              transform: `translateX(-${page * 100}%)`,
+            }}
+          >
+            {pairs.map((pair, idx) => (
+              <div
+                key={idx}
+                style={{
+                  flex: '0 0 100%',
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                  gap: '20px',
+                  padding: '10px',
+                }}
+              >
+                {pair.map((plan, i) => (
+                  <div
+                    key={i}
+                    onClick={() => setIsOpen(true)}
+                    style={{
+                      position: 'relative',
+                      aspectRatio: '16/10',
+                      border: '2px solid #1a1a1a',
+                      overflow: 'hidden',
+                      cursor: 'pointer',
+                    }}
+                  >
+                    {/* Blurred floor plan image */}
+                    <Image
+                      src={plan.img} alt={plan.label} fill
+                      className="object-cover"
+                      style={{ filter: 'blur(5px)', transform: 'scale(1.04)' }}
+                      sizes="(max-width:768px) 100vw, 50vw"
+                    />
 
-              {/* Light overlay */}
-              <div style={{
-                position: 'absolute', inset: 0,
-                background: 'rgba(255,255,255,0.28)',
-              }} />
+                    {/* Light overlay */}
+                    <div style={{
+                      position: 'absolute', inset: 0,
+                      background: 'rgba(255,255,255,0.3)',
+                    }} />
 
-              {/* Gold label — centered */}
-              <div style={{
-                position: 'absolute', inset: 0, zIndex: 5,
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-              }}>
-                <div style={{
-                  background: '#C4952A',
-                  padding: '10px 28px',
-                  borderRadius: '3px',
-                }}>
-                  <span style={{
-                    fontFamily: F_JOST, fontWeight: '700', fontSize: '16px',
-                    color: '#ffffff', letterSpacing: '0.08em', textTransform: 'uppercase',
-                  }}>
-                    {plan.label}
-                  </span>
-                </div>
+                    {/* Gold label — centered */}
+                    <div style={{
+                      position: 'absolute', inset: 0, zIndex: 5,
+                      display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    }}>
+                      <div style={{
+                        background: '#C4952A',
+                        padding: '10px 24px',
+                        borderRadius: '4px',
+                        boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+                      }}>
+                        <span style={{
+                          fontFamily: F_JOST, fontWeight: '700', fontSize: '15px',
+                          color: '#ffffff', letterSpacing: '0.04em', textTransform: 'uppercase',
+                        }}>
+                          {plan.label}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* Dot pagination */}
@@ -101,11 +126,10 @@ const MasterPlan = ({ setIsOpen }) => {
               key={i}
               onClick={() => setPage(i)}
               style={{
-                width: '10px', height: '10px', borderRadius: '50%',
-                background: page === i ? '#C4952A' : '#ccc',
+                width: '8px', height: '8px', borderRadius: '50%',
+                background: page === i ? '#1a1a1a' : '#bbbbbb',
                 border: 'none', cursor: 'pointer',
-                transition: 'background 0.3s, transform 0.3s',
-                transform: page === i ? 'scale(1.25)' : 'scale(1)',
+                transition: 'all 0.3s ease',
               }}
             />
           ))}
