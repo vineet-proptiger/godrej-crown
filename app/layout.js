@@ -34,7 +34,7 @@ const nephilm = localFont({
 
 export const metadata = {
   title: 'Godrej Crown Residences | 3 & 4 BHK Luxury Apartments, Sector 49 Gurgaon',
-  description: 'Godrej Crown Residences (Godrej Golf Links) — Ultra-luxury 3 & 4 BHK apartments in Sector 49, Gurugram. Forest-themed development by Godrej Properties spanning 10 acres. Starting ₹4.50 Cr*.',
+  description: 'Godrej Crown Residences (Godrej Golf Links) — Ultra-luxury 3 & 4 BHK apartments in Sector 49, Gurugram. Forest-themed development by Godrej Properties spanning 10 acres. Starting ₹2.17 Cr*.',
   icons: {
     icon: faviconImages.icon,
     apple: faviconImages.apple,

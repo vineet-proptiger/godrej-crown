@@ -153,7 +153,7 @@ const Hero = ({ setIsOpen }) => {
           {[
             'UNDER CONSTRUCTION',
             '3 & 4 BHK APARTMENTS',
-            '₹ 4.50 CR* ONWARDS',
+            '₹ 2.17 Cr* ONWARDS',
           ].map((text, i) => (
             <div
               key={i}

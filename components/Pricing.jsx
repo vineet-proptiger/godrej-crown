@@ -5,9 +5,9 @@ const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
 const F_SANS = 'var(--font-sans), Open Sans, sans-serif'
 
 const rows = [
-  { type: '3 BHK',                    size: '1857 SQ. FT.* ONWARDS', price: '4.50 CR* ONWARDS' },
-  { type: '3 BHK XL',                 size: '1993 SQ. FT.* ONWARDS', price: 'ON REQUEST' },
-  { type: '4 BHK + U',                size: '2777 SQ. FT.* ONWARDS', price: 'ON REQUEST' },
+  { type: '3 BHK', size: '1857 SQ. FT.* ONWARDS', price: '2.17 Cr* ONWARDS' },
+  { type: '3 BHK XL', size: '1993 SQ. FT.* ONWARDS', price: 'ON REQUEST' },
+  { type: '4 BHK + U', size: '2777 SQ. FT.* ONWARDS', price: 'ON REQUEST' },
   { type: '3 BHK + U (PRESIDENTIAL)', size: '2514 SQ. FT.* ONWARDS', price: 'ON REQUEST' },
   { type: '4 BHK + U (PRESIDENTIAL)', size: '3415 SQ. FT.* ONWARDS', price: 'ON REQUEST' },
 ]
