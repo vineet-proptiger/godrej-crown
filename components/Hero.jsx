@@ -62,29 +62,39 @@ const Hero = ({ setIsOpen }) => {
         position: 'absolute', bottom: '160px', left: 0, right: 0,
         zIndex: 2, textAlign: 'center', padding: '0 16px',
       }}>
+        {/* Project Tagline */}
+        <div style={{ marginBottom: '12px' }}>
+          <span style={{
+            background: 'rgba(196,149,42,0.12)',
+            border: '1px solid rgba(196,149,42,0.4)',
+            padding: '6px 24px',
+            borderRadius: '50px',
+            color: '#C4952A',
+            fontFamily: F_JOST,
+            fontSize: 'clamp(10px, 1.2vw, 13px)',
+            fontWeight: '700',
+            letterSpacing: '0.15em',
+            textTransform: 'uppercase',
+            display: 'inline-block',
+            backdropFilter: 'blur(8px)',
+            boxShadow: '0 4px 15px rgba(0,0,0,0.2)'
+          }}>
+            Godrej Golf Links
+          </span>
+        </div>
+
         <h1 style={{
           fontFamily: F_JOST,
           fontSize: 'clamp(22px, 3.2vw, 46px)',
           fontWeight: '800',
           color: '#ffffff',
-          margin: '0 0 6px',
+          margin: '0 0 16px',
           letterSpacing: '0.04em',
           textTransform: 'uppercase',
           textShadow: '0 2px 20px rgba(0,0,0,0.5)',
         }}>
           GODREJ CROWN RESIDENCES
         </h1>
-        <p style={{
-          fontFamily: F_JOST,
-          fontSize: 'clamp(13px, 1.8vw, 20px)',
-          fontWeight: '500',
-          color: '#C4952A',
-          margin: '0 0 14px',
-          letterSpacing: '0.08em',
-          textShadow: '0 1px 8px rgba(0,0,0,0.5)',
-        }}>
-          ( Godrej Golf Links )
-        </p>
 
         {/* Location */}
         <div style={{
