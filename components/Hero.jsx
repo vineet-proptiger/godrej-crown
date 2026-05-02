@@ -108,9 +108,9 @@ const Hero = ({ setIsOpen }) => {
           </svg>
           <span style={{
             fontFamily: F_SANS, fontSize: '16px', color: '#ffffff',
-            fontWeight: '500', letterSpacing: '0.04em',
+            fontWeight: '600', letterSpacing: '0.06em', textTransform: 'uppercase',
           }}>
-            Sector 49, Gurgaon
+            At Golf Course, Greater Noida
           </span>
         </div>
       </div>
