@@ -11,8 +11,7 @@ const VirtualTour = ({ setIsOpen }) => {
       style={{ 
         position: 'relative', 
         width: '100%', 
-        height: '80vh', 
-        minHeight: '400px',
+        height: 'clamp(300px, 45vh, 80vh)', 
         overflow: 'hidden',
         cursor: 'pointer'
       }}

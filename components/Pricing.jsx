@@ -5,11 +5,9 @@ const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
 const F_SANS = 'var(--font-sans), Open Sans, sans-serif'
 
 const rows = [
-  { type: '3 BHK', size: '1857 SQ. FT.* ONWARDS', price: '2.17 Cr* ONWARDS' },
-  { type: '3 BHK XL', size: '1993 SQ. FT.* ONWARDS', price: 'ON REQUEST' },
-  { type: '4 BHK + U', size: '2777 SQ. FT.* ONWARDS', price: 'ON REQUEST' },
-  { type: '3 BHK + U (PRESIDENTIAL)', size: '2514 SQ. FT.* ONWARDS', price: 'ON REQUEST' },
-  { type: '4 BHK + U (PRESIDENTIAL)', size: '3415 SQ. FT.* ONWARDS', price: 'ON REQUEST' },
+  { type: '3 BHK', size: '1800 SQ. FT.*', price: '₹ 4.5 CR*' },
+  { type: '3 BHK + Utility', size: '2400 SQ. FT.*', price: '₹ 6.5 CR*' },
+  { type: '4 BHK + Utility', size: '3200 SQ. FT.*', price: '₹ 8.5 CR*' },
 ]
 
 const Pricing = ({ setIsOpen }) => (
@@ -132,12 +130,12 @@ const Pricing = ({ setIsOpen }) => (
         </table>
       </div>
 
-      <p data-aos="fade-up" style={{
+      {/* <p data-aos="fade-up" style={{
         fontFamily: F_SANS, fontSize: '12px',
         color: '#666', textAlign: 'center', marginTop: '20px', letterSpacing: '0.02em',
       }}>
         * Prices are subject to change. Government taxes & charges extra as applicable.
-      </p>
+      </p> */}
     </div>
   </section>
 )

@@ -7,12 +7,14 @@ const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
 const F_SANS = 'var(--font-sans), Open Sans, sans-serif'
 
 const highlights = [
-  { title: 'Design & Interiors',        sub: 'Crafted with Italian marble' },
-  { title: 'Architecture & Design',     sub: 'Sprawling across 10 acres' },
-  { title: 'Sustainability & Security', sub: 'Embraces green living' },
-  { title: 'Connectivity',              sub: 'Golf Course Extension Road' },
-  { title: 'Skyline Standing',          sub: 'At ~120m height (30 floors)' },
-  { title: 'World-Class Amenities',     sub: 'Clubhouse & Wellness Zones' },
+  { title: 'Entry & Exit',           sub: 'Separate entry & exit points' },
+  { title: 'Retail & Parks',         sub: 'Retail + park within the project' },
+  { title: 'Green Concept',          sub: 'Total green space concept' },
+  { title: 'Wellbeing Design',       sub: 'Designed around wellbeing' },
+  { title: 'Golf Facing',            sub: '50% Golf-facing units' },
+  { title: 'Vastu Balconies',        sub: 'East/West facing balconies' },
+  { title: 'Fitness Lounge',         sub: 'World-class fitness facilities' },
+  { title: 'Premium Lifestyle',      sub: 'Ultra-luxury living experience' },
 ]
 
 const Highlights = ({ setIsOpen }) => (
@@ -72,11 +74,11 @@ const Highlights = ({ setIsOpen }) => (
               }}
               onMouseEnter={e => {
                 e.currentTarget.style.borderColor = '#C4952A'
-                e.currentTarget.style.background  = 'rgba(196,149,42,0.06)'
+                e.currentTarget.style.background = 'rgba(196,149,42,0.06)'
               }}
               onMouseLeave={e => {
                 e.currentTarget.style.borderColor = '#3a3a3a'
-                e.currentTarget.style.background  = 'rgba(255,255,255,0.03)'
+                e.currentTarget.style.background = 'rgba(255,255,255,0.03)'
               }}
             >
               <p style={{

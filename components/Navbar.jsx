@@ -103,7 +103,7 @@ const Navbar = ({ setIsOpen }) => {
               style={{ color: '#fff', padding: '4px', background: 'none', border: 'none' }}
               aria-label="Toggle Menu"
             >
-              {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+              {mobileOpen ? <X size={32} /> : <Menu size={32} />}
             </button>
           </div>
         </div>
