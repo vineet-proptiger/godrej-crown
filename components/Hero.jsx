@@ -64,21 +64,21 @@ const Hero = ({ setIsOpen }) => {
         zIndex: 2, textAlign: 'center', padding: '0 16px',
       }}>
         {/* Project Tagline */}
-        <div style={{ marginBottom: '12px' }}>
+        <div style={{ marginBottom: '14px' }}>
           <span style={{
-            background: 'rgba(196,149,42,0.12)',
-            border: '1px solid rgba(196,149,42,0.4)',
-            padding: '6px 24px',
+            background: 'rgba(0, 0, 0, 0.5)',
+            border: '1.5px solid #C4952A',
+            padding: '7px 28px',
             borderRadius: '50px',
             color: '#C4952A',
             fontFamily: F_JOST,
-            fontSize: 'clamp(10px, 1.2vw, 13px)',
-            fontWeight: '700',
-            letterSpacing: '0.15em',
+            fontSize: 'clamp(12px, 1.4vw, 15px)',
+            fontWeight: '800',
+            letterSpacing: '0.18em',
             textTransform: 'uppercase',
             display: 'inline-block',
-            backdropFilter: 'blur(8px)',
-            boxShadow: '0 4px 15px rgba(0,0,0,0.2)'
+            backdropFilter: 'blur(10px)',
+            boxShadow: '0 4px 20px rgba(0,0,0,0.4)'
           }}>
             Godrej Golf Links
           </span>

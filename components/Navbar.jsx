@@ -49,7 +49,7 @@ const Navbar = ({ setIsOpen }) => {
             <img
               src={logoImages.main}
               alt="Godrej Crown Residences"
-              style={{ height: '68px', width: 'auto', objectFit: 'contain', maxWidth: '240px' }}
+              style={{ height: 'clamp(52px, 10vw, 68px)', width: 'auto', objectFit: 'contain', maxWidth: '240px' }}
             />
           </a>
 
