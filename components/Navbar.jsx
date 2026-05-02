@@ -97,13 +97,7 @@ const Navbar = ({ setIsOpen }) => {
           </a>
 
           {/* Mobile hamburger */}
-          <div className="lg:hidden flex items-center gap-3">
-            <a
-              href={`tel:${PHONE}`}
-              style={{ color: '#ffffff', fontFamily: F_JOST, fontSize: '14px', fontWeight: '700' }}
-            >
-              {PHONE_DISPLAY}
-            </a>
+          <div className="lg:hidden flex items-center">
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               style={{ color: '#fff', padding: '4px', background: 'none', border: 'none' }}

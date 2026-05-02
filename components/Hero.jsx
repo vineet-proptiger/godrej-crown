@@ -152,7 +152,7 @@ const Hero = ({ setIsOpen }) => {
           maxWidth: '1200px',
         }}>
           {[
-            'UNDER CONSTRUCTION',
+            'PRE - LAUNCH',
             '3 & 4 BHK APARTMENTS',
             '₹ 2.17 Cr* ONWARDS',
           ].map((text, i) => (

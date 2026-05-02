@@ -11,11 +11,11 @@ const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
 
 const stats = [
   { value: '55 of 2023#', label: 'RERA No.' },
-  { value: '10 Acres*',   label: 'Total Land Area' },
-  { value: '500 Homes*',  label: 'No. of Units' },
-  { value: '05 Towers*',  label: 'No. of Towers' },
+  { value: '10 Acres*', label: 'Total Land Area' },
+  { value: '500 Homes*', label: 'No. of Units' },
+  { value: '05 Towers*', label: 'No. of Towers' },
   { value: 'G + 30 Floors*', label: 'No. of Floors' },
-  { value: '3 & 4 BHK',  label: 'Unit Variants' },
+  { value: '3 & 4 BHK', label: 'Unit Variants' },
 ]
 
 const inputStyle = {
@@ -32,13 +32,13 @@ const inputStyle = {
 }
 
 const EarlyForm = () => {
-  const [form, setForm]         = useState({ fullname: '', phone: '', email: '' })
-  const [loading, setLoading]   = useState(false)
-  const [success, setSuccess]   = useState(false)
-  const [error, setError]       = useState('')
-  const [ipAddress, setIp]      = useState('')
-  const [geoAddress, setGeo]    = useState(null)
-  const [focused, setFocused]   = useState('')
+  const [form, setForm] = useState({ fullname: '', phone: '', email: '' })
+  const [loading, setLoading] = useState(false)
+  const [success, setSuccess] = useState(false)
+  const [error, setError] = useState('')
+  const [ipAddress, setIp] = useState('')
+  const [geoAddress, setGeo] = useState(null)
+  const [focused, setFocused] = useState('')
 
   useEffect(() => {
     getGeo().then(d => {
@@ -55,7 +55,7 @@ const EarlyForm = () => {
     if (form.phone.replace(/\D/g, '').length < 10) { setError('Enter valid 10-digit number'); return }
     setError(''); setLoading(true)
     const tracking = buildTrackingFields(ipAddress, geoAddress)
-    const payload  = new FormData()
+    const payload = new FormData()
     payload.append('fullname', form.fullname)
     payload.append('email', form.email)
     payload.append('phone', form.phone)
@@ -68,7 +68,7 @@ const EarlyForm = () => {
     payload.append('city', CITY_DISPLAY)
     Object.entries(tracking).forEach(([k, v]) => payload.append(k, v))
     try {
-      const res  = await fetch(API_ENDPOINT, { method: 'POST', body: payload })
+      const res = await fetch(API_ENDPOINT, { method: 'POST', body: payload })
       const data = await res.json()
       if (data.status) setSuccess(true)
       else setError(data.msg || 'Something went wrong.')
@@ -145,14 +145,16 @@ const Overview = () => (
             fontFamily: F_SANS, fontSize: '14.5px', color: '#444444',
             lineHeight: 1.9, margin: '0 0 32px',
           }}>
-            Godrej Crown Residences (Godrej Golf Links) in Sector 49, Gurugram is a forest-themed
-            ultra-luxury development by Godrej Properties spanning 10 acres. It offers well-appointed
-            3 and 4 BHK apartments with Italian marble, smart home systems, and access to world-class
-            amenities including a forest clubhouse, spa, gym, infinity pool — all in a serene, green
-            setting with excellent connectivity.
+            Godrej Crown Residences — a thoughtfully designed ultra-luxury residential development set within a sprawling 100-acre golf township.
+
+            Surrounded by an expansive 9-hole golf course, the community offers wide internal roads, abundant green spaces, and well-planned infrastructure—creating a perfect balance of modern living and serene golf-facing lifestyle.
+
+            Strategically located, the project ensures seamless connectivity via the Yamuna Expressway and Noida–Greater Noida Expressway. Its close proximity to Pari Chowk and the upcoming Jewar International Airport further enhances convenience, making it well-connected to key destinations.
+
+            Godrej Crown Residences is an ideal choice for those seeking a harmonious blend of luxury, connectivity, and nature.
           </p>
 
-          {/* Stats grid */}
+          {/* Stats grid commented out
           <div style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(3, 1fr)',
@@ -181,6 +183,7 @@ const Overview = () => (
               </div>
             ))}
           </div>
+          */}
         </div>
 
         {/* RIGHT — image + form */}
