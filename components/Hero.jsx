@@ -47,6 +47,7 @@ const Hero = ({ setIsOpen }) => {
             className="object-cover"
             priority={idx === 0}
             sizes="100vw"
+            quality={100}
           />
         </div>
       ))}
@@ -54,7 +55,7 @@ const Hero = ({ setIsOpen }) => {
       {/* ── Dark gradient overlay ── */}
       <div style={{
         position: 'absolute', inset: 0, zIndex: 1,
-        background: 'linear-gradient(to top, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.22) 55%, rgba(0,0,0,0.10) 100%)',
+        background: 'linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.15) 50%, rgba(0,0,0,0) 100%)',
       }} />
 
       {/* ── Center-bottom text ── */}

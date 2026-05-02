@@ -21,10 +21,10 @@ const VirtualTour = ({ setIsOpen }) => {
     >
       <Image
         src={virtualTourImage}
-        alt="Godrej Crown Virtual Tour"
+        alt="Godrej Crown Residences Virtual Tour"
         fill
         className="object-cover"
-        style={{ filter: 'brightness(0.85)' }}
+        quality={100}
       />
       
       {/* Dark Overlay */}
