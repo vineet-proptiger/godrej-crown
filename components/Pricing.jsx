@@ -5,7 +5,7 @@ const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
 const F_SANS = 'var(--font-sans), Open Sans, sans-serif'
 
 const rows = [
-  { type: '3 BHK', size: '1800 SQ. FT.*', price: '₹ 4.5 CR*' },
+  { type: '3 BHK', size: '1800 SQ. FT.*', price: '₹ 2.17 Cr*' },
   { type: '3 BHK + Utility', size: '2400 SQ. FT.*', price: '₹ 6.5 CR*' },
   { type: '4 BHK + Utility', size: '3200 SQ. FT.*', price: '₹ 8.5 CR*' },
 ]

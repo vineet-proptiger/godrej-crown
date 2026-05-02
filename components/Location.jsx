@@ -5,14 +5,12 @@ const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
 const F_SANS = 'var(--font-sans), Open Sans, sans-serif'
 
 const locations = [
-  { name: "St. Xavier's High School", dist: '1.1 KM' },
-  { name: 'Park Hospital',             dist: '1.9 KM' },
-  { name: 'Suncity Success Tower',     dist: '3 KM' },
-  { name: 'WorldMark Gurgaon',         dist: '3.3 KM' },
-  { name: 'Gurugram University',       dist: '3.4 KM' },
-  { name: 'NH248A',                    dist: '3.7 KM' },
-  { name: 'Grand Hyatt Gurgaon',       dist: '6 KM' },
-  { name: 'Sector 55-56 Metro Station',dist: '6.5 KM' },
+  { name: 'Pari Chowk',                 dist: '2.5 KM' },
+  { name: 'Yamuna Expressway',          dist: '3 KM' },
+  { name: 'Noida-Gr Noida Expressway',  dist: '2.5 KM' },
+  { name: 'Kailash Hospital',           dist: '4.5 KM' },
+  { name: 'Knowledge Park II',          dist: '5 KM' },
+  { name: 'Jewar Int. Airport',         dist: '30 MINS' },
 ]
 
 const Location = () => (

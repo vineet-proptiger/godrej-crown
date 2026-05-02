@@ -87,7 +87,11 @@ export default function PrivacyPolicy() {
 
             {/* Intro */}
             <p className="mb-6 sm:mb-8 text-sm sm:text-base" style={{ lineHeight: 1.8, color: '#444', fontFamily: 'var(--font-jost), Jost, sans-serif' }}>
-              At <span style={{ color: 'var(--color-gold-dark)', fontWeight: '600' }}>{PROJECT_NAME}</span> (Authorized Marketing Partner), we respect your privacy and are committed to safeguarding your personal data. This Privacy Policy outlines how we collect, use, and protect your information when you visit our website.
+              At{' '}
+              <Link href="https://godrejcrowngolfresidences.in" style={{ color: 'var(--color-gold-dark)', fontWeight: '600', textDecoration: 'underline' }}>
+                {PROJECT_NAME}
+              </Link>{' '}
+              (Authorized Marketing Partner), we respect your privacy and are committed to safeguarding your personal data. This Privacy Policy outlines how we collect, use, and protect your information when you visit our website.
             </p>
 
             {/* ── Section 1 ── */}

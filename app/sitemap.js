@@ -1,4 +1,4 @@
-const BASE_URL = 'https://godrej-crown.com' // Replace with actual domain later
+const BASE_URL = 'https://godrejcrowngolfresidences.in'
 
 export default function sitemap() {
   return [
