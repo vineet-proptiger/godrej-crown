@@ -1,12 +1,12 @@
-// const BASE_URL = 'https://www.asbllegacyrtcxroad.in'
+const BASE_URL = 'https://godrej-crown.com' // Replace with actual domain later
 
-// export default function robots() {
-//   return {
-//     rules: {
-//       userAgent: '*',
-//       allow: '/',
-//       disallow: ['/api/', '/admin/', '/auth/', '/config/', '/server/', '/.env'],
-//     },
-//     sitemap: `${BASE_URL}/sitemap.xml`,
-//   }
-// }
+export default function robots() {
+  return {
+    rules: {
+      userAgent: '*',
+      allow: '/',
+      disallow: ['/api/', '/admin/'],
+    },
+    sitemap: `${BASE_URL}/sitemap.xml`,
+  }
+}
