@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import dynamic from 'next/dynamic'
 
+import { PROJECT_NAME } from '../lib/config'
 import Navbar  from '../components/Navbar'
 import Hero    from '../components/Hero'
 
@@ -66,7 +67,7 @@ export default function Home() {
           </svg>
         </a>
         <a
-          href="https://wa.me/919899055893"
+          href={`https://wa.me/919718344024?text=Hi%20I%20am%20interested%20in%20${encodeURIComponent(PROJECT_NAME)}`}
           target="_blank" rel="noopener noreferrer"
           className="flex-1 flex items-center justify-center py-3"
           style={{ background: '#25D366', borderRight: '1px solid #1fa854' }}

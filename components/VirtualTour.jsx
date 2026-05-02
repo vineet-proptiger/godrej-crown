@@ -48,10 +48,10 @@ const VirtualTour = ({ setIsOpen }) => {
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           border: '4px solid #C4952A',
           boxShadow: '0 0 40px rgba(0,0,0,0.4)',
-          transition: 'transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+          transition: 'all 0.4s ease',
         }}
-        onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'}
-        onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
+        onMouseEnter={e => { e.currentTarget.style.borderColor = '#ffffff'; e.currentTarget.style.background = '#C4952A'; e.currentTarget.querySelector('svg').setAttribute('fill', '#fff') }}
+        onMouseLeave={e => { e.currentTarget.style.borderColor = '#C4952A'; e.currentTarget.style.background = '#ffffff'; e.currentTarget.querySelector('svg').setAttribute('fill', '#C4952A') }}
         >
           <svg width="45" height="45" viewBox="0 0 24 24" fill="#C4952A">
             <path d="M8 5v14l11-7z" />

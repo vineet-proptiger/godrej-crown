@@ -84,7 +84,7 @@ const Location = () => (
             position: 'relative',
           }}>
             <iframe
-              src="https://www.google.com/maps?cid=11734109689802454663&hl=en&gl=IN&source=embed&output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1963546.9773004348!2d78.35763222880459!3d27.985812094564423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1777715011137!5m2!1sen!2sin"
               width="100%" height="100%"
               style={{ border: 0, minHeight: '420px', display: 'block', filter: 'grayscale(20%)' }}
               allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
