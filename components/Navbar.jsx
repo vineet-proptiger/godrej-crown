@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
 import { logoImages } from '../lib/images'
 
-const PHONE = '9899055893'
-const PHONE_DISPLAY = '9899 055 893'
+const PHONE = '9718344024'
+const PHONE_DISPLAY = '9718 344 024'
 
 const navLinks = [
   { name: 'HOME', href: '#' },
