@@ -75,7 +75,6 @@ const EnquireModal = ({ isOpen, setIsOpen }) => {
     payload.append('fullname', form.fullname)
     payload.append('email', form.email)
     payload.append('phone', form.phone)
-    payload.append('message', '')
     payload.append('website', '')          // honeypot — keep empty
     payload.append('projectId', PROJECT_ID)
     payload.append('projectName', PROJECT_NAME)
