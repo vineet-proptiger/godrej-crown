@@ -18,6 +18,40 @@ const amenities = [
     ),
   },
   {
+    label: 'Yoga',
+    icon: (hovered) => (
+      <svg width="72" height="72" viewBox="0 0 52 52" fill="none" stroke={hovered ? '#ffffff' : '#1a1a1a'} strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="26" cy="12" r="4" />
+        <path d="M26 16v12" />
+        <path d="M18 22l8 4 8-4" />
+        <path d="M26 28l-6 8M26 28l6 8" />
+        <line x1="10" y1="44" x2="42" y2="44" />
+      </svg>
+    ),
+  },
+  {
+    label: 'Mini Theatre',
+    icon: (hovered) => (
+      <svg width="72" height="72" viewBox="0 0 52 52" fill="none" stroke={hovered ? '#ffffff' : '#1a1a1a'} strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="8" y="14" width="36" height="24" rx="2" />
+        <path d="M8 20h36M8 32h36M26 14v24" />
+        <path d="M14 20v12M38 20v12" />
+      </svg>
+    ),
+  },
+  {
+    label: "Kid's Play Area",
+    icon: (hovered) => (
+      <svg width="72" height="72" viewBox="0 0 52 52" fill="none" stroke={hovered ? '#ffffff' : '#1a1a1a'} strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 14l8 12h-4l8 14" />
+        <line x1="12" y1="14" x2="12" y2="40" />
+        <path d="M28 40h12" />
+        <circle cx="36" cy="36" r="4" />
+        <path d="M36 32v-8l6-6" />
+      </svg>
+    ),
+  },
+  {
     label: 'GYM',
     icon: (hovered) => (
       <svg width="72" height="72" viewBox="0 0 52 52" fill="none" stroke={hovered ? '#ffffff' : '#1a1a1a'} strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
@@ -26,18 +60,6 @@ const amenities = [
         <rect x="40" y="22" width="8"  height="8" rx="2" />
         <rect x="14" y="18" width="6"  height="16" rx="3" />
         <rect x="32" y="18" width="6"  height="16" rx="3" />
-      </svg>
-    ),
-  },
-  {
-    label: 'Spa Salon',
-    icon: (hovered) => (
-      <svg width="72" height="72" viewBox="0 0 52 52" fill="none" stroke={hovered ? '#ffffff' : '#1a1a1a'} strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-        <ellipse cx="26" cy="32" rx="16" ry="6" />
-        <path d="M14 28v8" />
-        <path d="M38 28v8" />
-        <circle cx="26" cy="18" r="5" />
-        <path d="M34 26c2-1 5-2 6-5" />
       </svg>
     ),
   },
@@ -65,18 +87,6 @@ const amenities = [
     ),
   },
   {
-    label: 'Kids Play Area',
-    icon: (hovered) => (
-      <svg width="72" height="72" viewBox="0 0 52 52" fill="none" stroke={hovered ? '#ffffff' : '#1a1a1a'} strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 14l8 12h-4l8 14" />
-        <line x1="12" y1="14" x2="12" y2="40" />
-        <path d="M28 40h12" />
-        <circle cx="36" cy="36" r="4" />
-        <path d="M36 32v-8l6-6" />
-      </svg>
-    ),
-  },
-  {
     label: 'Clubhouse',
     icon: (hovered) => (
       <svg width="72" height="72" viewBox="0 0 52 52" fill="none" stroke={hovered ? '#ffffff' : '#1a1a1a'} strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
@@ -84,18 +94,6 @@ const amenities = [
         <rect x="14" y="26" width="24" height="16" />
         <rect x="21" y="32" width="10" height="10" />
         <line x1="10" y1="26" x2="42" y2="26" />
-      </svg>
-    ),
-  },
-  {
-    label: 'Yoga Deck',
-    icon: (hovered) => (
-      <svg width="72" height="72" viewBox="0 0 52 52" fill="none" stroke={hovered ? '#ffffff' : '#1a1a1a'} strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="26" cy="12" r="4" />
-        <path d="M26 16v12" />
-        <path d="M18 22l8 4 8-4" />
-        <path d="M26 28l-6 8M26 28l6 8" />
-        <line x1="10" y1="44" x2="42" y2="44" />
       </svg>
     ),
   },

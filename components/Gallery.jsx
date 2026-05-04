@@ -27,14 +27,10 @@ const Gallery = ({ setIsOpen }) => {
           GALLERY
         </h2>
 
-        {/* 3-column grid */}
+        {/* Responsive grid: 2 columns on mobile, 3 on desktop */}
         <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: '16px',
-          }}
-          className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+          className="grid grid-cols-2 lg:grid-cols-3 gap-4"
+          data-aos="fade-up"
         >
           {galleryImages.map((img, idx) => (
             <div
