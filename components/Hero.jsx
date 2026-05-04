@@ -140,12 +140,44 @@ const Hero = ({ setIsOpen }) => {
       <div style={{
         position: 'absolute', bottom: 0, left: 0, right: 0, zIndex: 5,
       }}>
+        {/* USP row */}
+        <div style={{
+          background: 'rgba(0,0,0,0.6)',
+          backdropFilter: 'blur(8px)',
+          display: 'grid', gridTemplateColumns: '1fr 1fr 1fr',
+          borderTop: '1px solid rgba(196,149,42,0.3)',
+          maxWidth: '1200px',
+          margin: '0 auto',
+        }}>
+          {[
+            '100 Acre Golf Ecosystem',
+            '60m Wide Road Access',
+            '3.5 Acres | 3 Towers',
+          ].map((point, i) => (
+            <div key={i} style={{
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              gap: '8px', padding: '10px 12px',
+              borderRight: i < 2 ? '1px solid rgba(255,255,255,0.08)' : 'none',
+            }}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="#C4952A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              <span style={{
+                fontFamily: F_SANS, fontSize: 'clamp(10px, 1.5vw, 13px)',
+                fontWeight: '600', color: '#ffffff', letterSpacing: '0.02em',
+              }}>
+                {point}
+              </span>
+            </div>
+          ))}
+        </div>
+
         <div style={{
           background: 'linear-gradient(135deg, rgba(26,26,26,0.95) 0%, rgba(38,38,38,0.85) 100%)',
           backdropFilter: 'blur(12px)',
           display: 'grid', gridTemplateColumns: '1fr 1fr 1fr',
           borderTop: '1px solid rgba(255,255,255,0.15)',
-          borderRadius: '16px 16px 0 0',
           boxShadow: '0 -10px 40px rgba(0,0,0,0.5)',
           overflow: 'hidden',
           margin: '0 auto',
@@ -160,7 +192,7 @@ const Hero = ({ setIsOpen }) => {
               key={i}
               style={{
                 textAlign: 'center',
-                padding: '24px 12px',
+                padding: '14px 12px',
                 borderRight: i < 2 ? '1px solid rgba(255,255,255,0.1)' : 'none',
               }}
             >
