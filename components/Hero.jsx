@@ -60,7 +60,7 @@ const Hero = ({ setIsOpen }) => {
 
       {/* ── Center-bottom text ── */}
       <div style={{
-        position: 'absolute', bottom: '160px', left: 0, right: 0,
+        position: 'absolute', bottom: '110px', left: 0, right: 0,
         zIndex: 2, textAlign: 'center', padding: '0 16px',
       }}>
         {/* Project Tagline */}
@@ -116,7 +116,7 @@ const Hero = ({ setIsOpen }) => {
       </div>
 
       {/* ── Dot indicators ── */}
-      <div style={{
+      {/* <div style={{
         position: 'absolute', bottom: '110px', left: '50%',
         transform: 'translateX(-50%)', zIndex: 3,
         display: 'flex', gap: '8px',
@@ -134,7 +134,7 @@ const Hero = ({ setIsOpen }) => {
             }}
           />
         ))}
-      </div>
+      </div> */}
 
       {/* ── Bottom info bar ── */}
       <div style={{
