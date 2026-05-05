@@ -59,10 +59,9 @@ const Hero = ({ setIsOpen }) => {
       }} />
 
       {/* ── Center-bottom text ── */}
-      <div style={{
-        position: 'absolute', bottom: '110px', left: 0, right: 0,
-        zIndex: 2, textAlign: 'center', padding: '0 16px',
-      }}>
+      <div 
+        className="absolute left-0 right-0 z-[2] text-center px-4 bottom-[160px] lg:bottom-[110px]"
+        style={{ zIndex: 2 }}>
         {/* Project Tagline */}
         <div style={{ marginBottom: '14px' }}>
           <span style={{
@@ -101,13 +100,13 @@ const Hero = ({ setIsOpen }) => {
         <div style={{
           display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px',
         }}>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+          <svg width="clamp(14px, 1.6vw, 16px)" height="clamp(14px, 1.6vw, 16px)" viewBox="0 0 24 24" fill="none"
             stroke="#ffffff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
             <circle cx="12" cy="10" r="3" />
           </svg>
           <span style={{
-            fontFamily: F_SANS, fontSize: '16px', color: '#ffffff',
+            fontFamily: F_SANS, fontSize: 'clamp(13px, 1.8vw, 16px)', color: '#ffffff',
             fontWeight: '600', letterSpacing: '0.06em', textTransform: 'uppercase',
           }}>
             At Golf Course, Greater Noida

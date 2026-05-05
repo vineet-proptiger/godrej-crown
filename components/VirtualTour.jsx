@@ -7,11 +7,10 @@ const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
 
 const VirtualTour = ({ setIsOpen }) => {
   return (
-    <section 
-      style={{ 
-        position: 'relative', 
-        width: '100%', 
-        height: 'clamp(300px, 45vh, 80vh)', 
+    <section
+      className="relative w-full overflow-hidden cursor-pointer h-[clamp(300px,45vh,80vh)] lg:h-[480px]"
+      style={{
+        position: 'relative',
         overflow: 'hidden',
         cursor: 'pointer'
       }}
@@ -25,7 +24,7 @@ const VirtualTour = ({ setIsOpen }) => {
         className="object-cover"
         quality={100}
       />
-      
+
       {/* Dark Overlay */}
       <div style={{
         position: 'absolute', inset: 0,
@@ -49,8 +48,8 @@ const VirtualTour = ({ setIsOpen }) => {
           boxShadow: '0 0 40px rgba(0,0,0,0.4)',
           transition: 'all 0.4s ease',
         }}
-        onMouseEnter={e => { e.currentTarget.style.borderColor = '#ffffff'; e.currentTarget.style.background = '#C4952A'; e.currentTarget.querySelector('svg').setAttribute('fill', '#fff') }}
-        onMouseLeave={e => { e.currentTarget.style.borderColor = '#C4952A'; e.currentTarget.style.background = '#ffffff'; e.currentTarget.querySelector('svg').setAttribute('fill', '#C4952A') }}
+          onMouseEnter={e => { e.currentTarget.style.borderColor = '#ffffff'; e.currentTarget.style.background = '#C4952A'; e.currentTarget.querySelector('svg').setAttribute('fill', '#fff') }}
+          onMouseLeave={e => { e.currentTarget.style.borderColor = '#C4952A'; e.currentTarget.style.background = '#ffffff'; e.currentTarget.querySelector('svg').setAttribute('fill', '#C4952A') }}
         >
           <svg width="45" height="45" viewBox="0 0 24 24" fill="#C4952A">
             <path d="M8 5v14l11-7z" />
