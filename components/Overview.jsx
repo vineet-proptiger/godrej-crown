@@ -143,7 +143,7 @@ const Overview = () => (
 
           <p style={{
             fontFamily: F_SANS, fontSize: '14.5px', color: '#444444',
-            lineHeight: 1.9, margin: '0 0 32px',
+            lineHeight: 1.9, margin: '0 0 32px', textAlign: 'justify',
           }}>
             Godrej Crown Residences — a thoughtfully designed ultra-luxury residential development set within a sprawling 100-acre golf township.
 

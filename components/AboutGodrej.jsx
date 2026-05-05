@@ -6,8 +6,8 @@ const F_SANS = 'var(--font-sans), Open Sans, sans-serif'
 
 const stats = [
   { value: '125+', label: 'Years of Legacy' },
-  { value: '35+',  label: 'Total Projects' },
-  { value: '11+',  label: 'Total Cities' },
+  { value: '35+', label: 'Total Projects' },
+  { value: '11+', label: 'Total Cities' },
 ]
 
 const AboutGodrej = () => (
@@ -34,7 +34,7 @@ const AboutGodrej = () => (
         style={{
           fontFamily: F_SANS, fontSize: '14.5px',
           color: '#555555', lineHeight: 1.9,
-          margin: '0 0 52px',
+          margin: '0 0 52px', textAlign: 'justify',
         }}
       >
         Established in 1897, the Godrej Group has its roots in India's Independence and Swadeshi
