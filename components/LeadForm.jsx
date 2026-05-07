@@ -1,7 +1,7 @@
 'use client'
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { PROJECT_ID, PROJECT_NAME, API_ENDPOINT, SHEET_NAME, SECRET_KEY, CITY_DISPLAY } from '../lib/config'
-import { getGeo, buildTrackingFields } from '../lib/formMeta'
+import { buildTrackingFields } from '../lib/formMeta'
 import Link from 'next/link'
 
 const GOLD = 'var(--color-gold)'
@@ -15,16 +15,6 @@ const LeadForm = ({ formName = 'Hero Form', btnText = 'Submit Details' }) => {
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
   const [error, setError] = useState('')
-  const [ipAddress, setIpAddress] = useState('')
-  const [geoAddress, setGeoAddress] = useState(null)
-
-  useEffect(() => {
-    getGeo().then(d => {
-      if (!d) return
-      setIpAddress(d.ip || '')
-      setGeoAddress({ city: d.city, region: d.region, postal_code: d.postal_code, country: d.country })
-    })
-  }, [])
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -35,7 +25,7 @@ const LeadForm = ({ formName = 'Hero Form', btnText = 'Submit Details' }) => {
     e.preventDefault()
     if (!/^\d{10}$/.test(formData.phone)) { setError('Please enter a valid 10-digit mobile number.'); return }
     setError(''); setLoading(true)
-    const tracking = buildTrackingFields(ipAddress, geoAddress)
+    const tracking = buildTrackingFields()
     const payload = new FormData()
     payload.append('fullname', formData.fullname)
     payload.append('email', formData.email)
@@ -59,7 +49,8 @@ const LeadForm = ({ formName = 'Hero Form', btnText = 'Submit Details' }) => {
             event: 'lead_submit_success', form_name: formName,
             user_data: {
               email: formData.email.trim() || undefined, phone: formData.phone,
-              first_name: nameParts[0] || '', last_name: nameParts.slice(1).join(' ') || '', address: geoAddress
+              first_name: nameParts[0] || '', last_name: nameParts.slice(1).join(' ') || ''
+
             }
           })
         }

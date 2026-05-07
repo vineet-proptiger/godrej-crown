@@ -1,8 +1,8 @@
 'use client'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import { PROJECT_ID, PROJECT_NAME, API_ENDPOINT, SHEET_NAME, SECRET_KEY, CITY_DISPLAY } from '../lib/config'
-import { getGeo, buildTrackingFields } from '../lib/formMeta'
+import { buildTrackingFields } from '../lib/formMeta'
 import { overviewImage } from '../lib/images'
 import Link from 'next/link'
 
@@ -36,17 +36,8 @@ const EarlyForm = () => {
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
   const [error, setError] = useState('')
-  const [ipAddress, setIp] = useState('')
-  const [geoAddress, setGeo] = useState(null)
   const [focused, setFocused] = useState('')
 
-  useEffect(() => {
-    getGeo().then(d => {
-      if (!d) return
-      setIp(d.ip || '')
-      setGeo({ city: d.city, region: d.region, postal_code: d.postal_code, country: d.country })
-    })
-  }, [])
 
   const handle = e => setForm({ ...form, [e.target.name]: e.target.value })
 
@@ -54,7 +45,7 @@ const EarlyForm = () => {
     e.preventDefault()
     if (form.phone.replace(/\D/g, '').length < 10) { setError('Enter valid 10-digit number'); return }
     setError(''); setLoading(true)
-    const tracking = buildTrackingFields(ipAddress, geoAddress)
+    const tracking = buildTrackingFields()
     const payload = new FormData()
     payload.append('fullname', form.fullname)
     payload.append('email', form.email)

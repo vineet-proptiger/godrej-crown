@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { PROJECT_ID, PROJECT_NAME, API_ENDPOINT, SHEET_NAME, SECRET_KEY, CITY_DISPLAY } from '../lib/config'
-import { getGeo, buildTrackingFields } from '../lib/formMeta'
+import { buildTrackingFields } from '../lib/formMeta'
 
 const F_SANS = 'var(--font-sans), Open Sans, sans-serif'
 const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
@@ -28,8 +28,6 @@ const EnquireModal = ({ isOpen, setIsOpen }) => {
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
   const [error, setError] = useState('')
-  const [ipAddress, setIpAddress] = useState('')
-  const [geoAddress, setGeoAddress] = useState(null)
 
   /* ── Auto-trigger (same as before) ── */
   useEffect(() => {
@@ -51,14 +49,6 @@ const EnquireModal = ({ isOpen, setIsOpen }) => {
     return () => { document.body.style.overflow = '' }
   }, [isOpen])
 
-  /* ── Geo fetch ── */
-  useEffect(() => {
-    getGeo().then(d => {
-      if (!d) return
-      setIpAddress(d.ip || '')
-      setGeoAddress({ city: d.city, region: d.region, postal_code: d.postal_code, country: d.country })
-    })
-  }, [])
 
   const handle = (e) => {
     const { name, value } = e.target
@@ -70,7 +60,7 @@ const EnquireModal = ({ isOpen, setIsOpen }) => {
     e.preventDefault()
     if (!/^\d{10}$/.test(form.phone)) { setError('Please enter a valid 10-digit mobile number.'); return }
     setError(''); setLoading(true)
-    const tracking = buildTrackingFields(ipAddress, geoAddress)
+    const tracking = buildTrackingFields()
     const payload = new FormData()
     payload.append('fullname', form.fullname)
     payload.append('email', form.email)
@@ -95,8 +85,7 @@ const EnquireModal = ({ isOpen, setIsOpen }) => {
             event: 'lead_submit_success', form_name: 'Popup Modal',
             user_data: {
               email: form.email.trim() || undefined, phone: form.phone,
-              first_name: nameParts[0] || '', last_name: nameParts.slice(1).join(' ') || '',
-              address: geoAddress,
+              first_name: nameParts[0] || '', last_name: nameParts.slice(1).join(' ') || ''
             },
           })
         }
