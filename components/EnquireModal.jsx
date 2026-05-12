@@ -84,7 +84,7 @@ const EnquireModal = ({ isOpen, setIsOpen }) => {
           window.dataLayer.push({
             event: 'lead_submit_success', form_name: 'Popup Modal',
             user_data: {
-              email: form.email.trim() || undefined, phone: form.phone,
+              email: form.email.trim() || undefined, phone: `+91${form.phone}`,
               first_name: nameParts[0] || '', last_name: nameParts.slice(1).join(' ') || ''
             },
           })

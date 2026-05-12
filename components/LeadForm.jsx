@@ -48,7 +48,7 @@ const LeadForm = ({ formName = 'Hero Form', btnText = 'Submit Details' }) => {
           window.dataLayer.push({
             event: 'lead_submit_success', form_name: formName,
             user_data: {
-              email: formData.email.trim() || undefined, phone: formData.phone,
+              email: formData.email.trim() || undefined, phone: `+91${formData.phone}`,
               first_name: nameParts[0] || '', last_name: nameParts.slice(1).join(' ') || ''
 
             }
