@@ -138,6 +138,7 @@ const Hero = () => {
                 backdropFilter: 'blur(6px)',
                 padding: '7px 14px 7px 10px',
                 borderRadius: '4px',
+                width: '100%',
               }}>
                 <span style={{
                   display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
