@@ -2,13 +2,14 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { heroImages } from '../lib/images'
+import { Check } from 'lucide-react'
 
 const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
 const F_SANS = 'var(--font-sans), Open Sans, sans-serif'
 
 const slides = [heroImages.banner, heroImages.banner2]
 
-const Hero = ({ setIsOpen }) => {
+const Hero = () => {
   const [current, setCurrent] = useState(0)
 
   useEffect(() => {
@@ -59,8 +60,8 @@ const Hero = ({ setIsOpen }) => {
       }} />
 
       {/* ── Center-bottom text ── */}
-      <div 
-        className="absolute left-0 right-0 z-[2] text-center px-4 bottom-[160px] lg:bottom-[110px]"
+      <div
+        className="absolute left-0 right-0 z-[2] text-left lg:text-center px-6 bottom-[155px] lg:bottom-[110px]"
         style={{ zIndex: 2 }}>
         {/* Project Tagline */}
         <div style={{ marginBottom: '14px' }}>
@@ -96,21 +97,65 @@ const Hero = ({ setIsOpen }) => {
           GODREJ CROWN RESIDENCES
         </h1>
 
-        {/* Location */}
-        <div style={{
-          display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px',
-        }}>
-          <svg width="clamp(14px, 1.6vw, 16px)" height="clamp(14px, 1.6vw, 16px)" viewBox="0 0 24 24" fill="none"
-            stroke="#ffffff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-            <circle cx="12" cy="10" r="3" />
-          </svg>
-          <span style={{
-            fontFamily: F_SANS, fontSize: 'clamp(13px, 1.8vw, 16px)', color: '#ffffff',
-            fontWeight: '600', letterSpacing: '0.06em', textTransform: 'uppercase',
-          }}>
-            At Golf Course, Greater Noida
-          </span>
+        {/* Location + Mobile highlights — shared left-aligned wrapper */}
+        <div style={{ display: 'block', textAlign: 'left' }}>
+          {/* Location */}
+          <div className="location-strip" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <svg width="clamp(14px, 1.6vw, 16px)" height="clamp(14px, 1.6vw, 16px)" viewBox="0 0 24 24" fill="none"
+              stroke="#ffffff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <span style={{
+              fontFamily: F_SANS, fontSize: 'clamp(13px, 1.8vw, 16px)', color: '#ffffff',
+              fontWeight: '600', letterSpacing: '0.06em', textTransform: 'uppercase',
+            }}>
+              At Golf Course, Greater Noida
+            </span>
+          </div>
+
+          {/* Mobile-only highlights */}
+          <div className="lg:hidden" style={{ marginTop: '10px' }}>
+            <style>{`
+              @keyframes slideInLeft {
+                from { opacity: 0; transform: translateX(-24px); }
+                to   { opacity: 1; transform: translateX(0); }
+              }
+            `}</style>
+            {[
+              'Only 4 residences per floor',
+              'Private, secure, composed living',
+              'Just 5 minutes from Pari Chowk',
+              'Private entry with 60m grand frontage',
+            ].map((text, i) => (
+              <div key={i} style={{
+                display: 'flex', alignItems: 'center',
+                gap: '8px', marginBottom: '4px',
+                opacity: 0,
+                animation: `slideInLeft 0.4s ease forwards`,
+                animationDelay: `${0.3 + i * 0.2}s`,
+                background: 'rgba(0,0,0,0.55)',
+                backdropFilter: 'blur(6px)',
+                padding: '7px 14px 7px 10px',
+                borderRadius: '4px',
+              }}>
+                <span style={{
+                  display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                  width: '17px', height: '17px', background: '#ffffff',
+                  borderRadius: '50%', flexShrink: 0,
+                }}>
+                  <Check size={12} color="#000000" strokeWidth={3} />
+                </span>
+                <span style={{
+                  fontFamily: F_SANS, fontSize: 'clamp(13px, 1.8vw, 16px)', color: '#ffffff',
+                  fontWeight: '500', letterSpacing: '0.02em',
+                  textShadow: '0 1px 6px rgba(0,0,0,0.8)',
+                }}>
+                  {text}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -185,7 +230,7 @@ const Hero = ({ setIsOpen }) => {
           {[
             'PRE - LAUNCH',
             '3 & 4 BHK APARTMENTS',
-            '₹ 2.17 Cr* ONWARDS',
+            '₹ 3.60 Cr* ONWARDS',
           ].map((text, i) => (
             <div
               key={i}

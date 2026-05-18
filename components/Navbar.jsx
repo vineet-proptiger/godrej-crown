@@ -7,7 +7,7 @@ const PHONE = '9718344024'
 const PHONE_DISPLAY = '9718 344 024'
 
 const navLinks = [
-  { name: 'HOME', href: '#' },
+  // { name: 'HOME', href: '#' },
   { name: 'OVERVIEW', href: '#overview' },
   { name: 'HIGHLIGHTS', href: '#highlights' },
   { name: 'GALLERY', href: '#gallery' },
@@ -18,7 +18,6 @@ const navLinks = [
 ]
 
 const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
-const F_SANS = 'var(--font-sans), Open Sans, sans-serif'
 
 const Navbar = ({ setIsOpen }) => {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -42,14 +41,14 @@ const Navbar = ({ setIsOpen }) => {
       }}
     >
       <div className="container mx-auto px-4 md:px-8">
-        <div className="flex items-center justify-between h-[88px]">
+        <div className="flex items-center justify-between h-[68px] md:h-[88px]">
 
           {/* Logo */}
           <a href="#" className="flex items-center shrink-0">
             <img
               src={logoImages.main}
               alt="Godrej Crown Residences"
-              style={{ height: 'clamp(52px, 10vw, 68px)', width: 'auto', objectFit: 'contain', maxWidth: '240px' }}
+              style={{ height: 'clamp(42px, 8vw, 68px)', width: 'auto', objectFit: 'contain', maxWidth: '200px' }}
             />
           </a>
 

@@ -28,7 +28,7 @@ export default function Home() {
     <main className="relative min-h-screen bg-white">
       <AosInit />
       <Navbar setIsOpen={setIsOpen} />
-      <Hero setIsOpen={setIsOpen} />
+      <Hero />
       <Overview setIsOpen={setIsOpen} />
       <Highlights setIsOpen={setIsOpen} />
       <Gallery setIsOpen={setIsOpen} />
@@ -59,17 +59,22 @@ export default function Home() {
       <div className="sticky-bottom-bar">
         <a
           href="tel:+919718344024"
-          className="flex-1 flex items-center justify-center py-3"
+          className="flex-1 flex items-center justify-center py-1"
           style={{ background: '#1a1a1a', borderRight: '1px solid #333' }}
         >
-          <svg width="22" height="22" fill="#ffffff" viewBox="0 0 24 24">
-            <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
-          </svg>
+          <span style={{
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            width: '40px', height: '40px', borderRadius: '50%', background: '#C4952A',
+          }}>
+            <svg width="20" height="20" fill="#ffffff" viewBox="0 0 24 24">
+              <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
+            </svg>
+          </span>
         </a>
         <a
           href={`https://wa.me/919718344024?text=Hi%20I%20am%20interested%20in%20${encodeURIComponent(PROJECT_NAME)}`}
           target="_blank" rel="noopener noreferrer"
-          className="flex-1 flex items-center justify-center py-3"
+          className="flex-1 flex items-center justify-center py-1"
           style={{ background: '#25D366', borderRight: '1px solid #1fa854' }}
         >
           <svg width="22" height="22" fill="#ffffff" viewBox="0 0 24 24">
@@ -78,7 +83,7 @@ export default function Home() {
         </a>
         <button
           onClick={() => setIsOpen(true)}
-          className="flex-1 flex items-center justify-center py-3"
+          className="flex-1 flex items-center justify-center py-1"
           style={{ background: '#C4952A' }}
         >
           <svg width="22" height="22" fill="none" stroke="#ffffff" strokeWidth="2" viewBox="0 0 24 24">

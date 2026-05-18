@@ -5,9 +5,9 @@ const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
 const F_SANS = 'var(--font-sans), Open Sans, sans-serif'
 
 const rows = [
-  { type: '3 BHK', size: '1800 SQ. FT.*', price: '₹ 2.17 Cr*' },
-  { type: '3 BHK + Utility', size: '2400 SQ. FT.*', price: 'Ask For Price' },
-  { type: '4 BHK + Utility', size: '3200 SQ. FT.*', price: 'Ask For Price' },
+  { type: '3 BHK', size: '1800 SQ. FT.*', price: '₹ 3.60 Cr*' },
+  { type: '3 BHK + Servant', size: '2400 SQ. FT.*', price: 'Ask For Price' },
+  { type: '4 BHK', size: '3200 SQ. FT.*', price: 'Ask For Price' },
 ]
 
 const Pricing = ({ setIsOpen }) => (
