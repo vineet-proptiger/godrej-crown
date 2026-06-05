@@ -5,9 +5,9 @@ const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
 const F_SANS = 'var(--font-sans), Open Sans, sans-serif'
 
 const rows = [
-  { type: '3 BHK', size: '1800 SQ. FT.*', price: '₹ 3.60 Cr*' },
-  { type: '3 BHK + Servant', size: '2400 SQ. FT.*', price: 'Ask For Price' },
-  { type: '4 BHK', size: '3200 SQ. FT.*', price: 'Ask For Price' },
+  { type: '3 BHK', size: '1769 Sq.Ft.', price: '₹ 2.85 Cr*' },
+  { type: '3 BHK + Utility', size: '2392 Sq.Ft.', price: '₹ 4.20 Cr*' },
+  { type: '4 BHK + Utility', size: '3294 Sq.Ft.', price: '₹ 5.75 Cr*' },
 ]
 
 const Pricing = ({ setIsOpen }) => (
@@ -130,12 +130,39 @@ const Pricing = ({ setIsOpen }) => (
         </table>
       </div>
 
-      {/* <p data-aos="fade-up" style={{
-        fontFamily: F_SANS, fontSize: '12px',
-        color: '#666', textAlign: 'center', marginTop: '20px', letterSpacing: '0.02em',
+      {/* EOI Details Section */}
+      {/* <div data-aos="fade-up" style={{
+        marginTop: '48px',
+        padding: '32px',
+        background: '#222222',
+        border: '2px solid #C4952A',
+        borderRadius: '8px',
+        textAlign: 'center'
       }}>
-        * Prices are subject to change. Government taxes & charges extra as applicable.
-      </p> */}
+        <h3 style={{
+          fontFamily: F_JOST, fontWeight: '700', fontSize: '20px',
+          color: '#C4952A', marginBottom: '24px', letterSpacing: '0.04em', textTransform: 'uppercase'
+        }}>
+          EXPRESSION OF INTEREST (EOI) DETAILS
+        </h3>
+        <div style={{
+          display: 'flex', flexDirection: 'column', gap: '16px', alignItems: 'center',
+          fontFamily: F_SANS, fontSize: '15px', color: '#ffffff', letterSpacing: '0.02em'
+        }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', maxWidth: '400px', borderBottom: '1px solid #444', paddingBottom: '8px' }}>
+            <span>3 BHK</span>
+            <span style={{ fontWeight: '600', color: '#C4952A' }}>₹ 10 Lakhs</span>
+          </div>
+          <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', maxWidth: '400px', borderBottom: '1px solid #444', paddingBottom: '8px' }}>
+            <span>3 BHK + Utility</span>
+            <span style={{ fontWeight: '600', color: '#C4952A' }}>₹ 12 Lakhs</span>
+          </div>
+          <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', maxWidth: '400px' }}>
+            <span>4 BHK + Utility</span>
+            <span style={{ fontWeight: '600', color: '#C4952A' }}>₹ 15 Lakhs</span>
+          </div>
+        </div>
+      </div> */}
     </div>
   </section>
 )

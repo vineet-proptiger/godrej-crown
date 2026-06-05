@@ -101,16 +101,11 @@ const Hero = () => {
         <div style={{ display: 'block', textAlign: 'left' }}>
           {/* Location */}
           <div className="location-strip" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-            <svg width="clamp(14px, 1.6vw, 16px)" height="clamp(14px, 1.6vw, 16px)" viewBox="0 0 24 24" fill="none"
-              stroke="#ffffff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-              <circle cx="12" cy="10" r="3" />
-            </svg>
             <span style={{
               fontFamily: F_SANS, fontSize: 'clamp(13px, 1.8vw, 16px)', color: '#ffffff',
               fontWeight: '600', letterSpacing: '0.06em', textTransform: 'uppercase',
             }}>
-              At Golf Course, Greater Noida
+              The Final Chapter of Luxury Living in a 100-Acre Golf course
             </span>
           </div>
 
@@ -123,10 +118,13 @@ const Hero = () => {
               }
             `}</style>
             {[
-              'Only 4 residences per floor',
-              'Private, secure, composed living',
-              'Just 5 minutes from Pari Chowk',
-              'Private entry with 60m grand frontage',
+              'Only 3 Towers | 288 Exclusive Residences',
+              'Breathtaking Golf Course & Green Views',
+              'Ultra-Low Density Development',
+              'East-West Oriented Homes for Superior Light & Ventilation',
+              'Located within a 100-Acre Premium Golf Township',
+              'Luxury Retail & Daily Conveniences Within Walking Distance',
+              'A Rare Opportunity to Own in the Final Residential Phase of Godrej Golf Links',
             ].map((text, i) => (
               <div key={i} style={{
                 display: 'flex', alignItems: 'center',
@@ -230,8 +228,8 @@ const Hero = () => {
         }}>
           {[
             'PRE - LAUNCH',
-            '3 & 4 BHK APARTMENTS',
-            '₹ 3.60 Cr* ONWARDS',
+            '3 & 4 BHK EOI STARTS AT 10 Lacs*',
+            '₹ 2.85 Cr* ONWARDS',
           ].map((text, i) => (
             <div
               key={i}

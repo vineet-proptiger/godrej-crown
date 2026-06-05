@@ -148,13 +148,13 @@ const Overview = () => (
             fontFamily: F_SANS, fontSize: '14.5px', color: '#444444',
             lineHeight: 1.9, margin: '0 0 32px', textAlign: 'justify',
           }}>
-            Godrej Crown Residences — a thoughtfully designed ultra-luxury residential development set within a sprawling 100-acre golf township.
+            Godrej Crown Residences — The Final Chapter of Luxury Living in a 100-Acre Golf course. An exclusive, ultra-low density development featuring only 3 towers and 288 exclusive residences.
 
-            Surrounded by an expansive 9-hole golf course, the community offers wide internal roads, abundant green spaces, and well-planned infrastructure—creating a perfect balance of modern living and serene golf-facing lifestyle.
+            Surrounded by an expansive 9-hole executive golf course, the community offers wide internal roads, abundant green spaces, and well-planned infrastructure—creating a perfect balance of modern living and a serene golf-facing lifestyle.
 
-            Strategically located, the project ensures seamless connectivity via the Yamuna Expressway and Noida–Greater Noida Expressway. Its close proximity to Pari Chowk and the upcoming Jewar International Airport further enhances convenience, making it well-connected to key destinations.
+            Strategically located, the project ensures seamless connectivity via the Yamuna Expressway and Noida–Greater Noida Expressway. Luxury retail and daily conveniences are within walking distance, making it well-connected to key destinations.
 
-            Godrej Crown Residences is an ideal choice for those seeking a harmonious blend of luxury, connectivity, and nature.
+            Godrej Crown Residences is an ideal choice for those seeking a harmonious blend of luxury, connectivity, and nature in the final residential phase of Godrej Golf Links.
           </p>
 
           {/* Stats grid commented out

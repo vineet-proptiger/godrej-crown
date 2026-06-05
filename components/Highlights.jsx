@@ -7,14 +7,13 @@ const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
 const F_SANS = 'var(--font-sans), Open Sans, sans-serif'
 
 const highlights = [
-  { title: 'Entry & Exit',           sub: 'Separate entry & exit points' },
-  { title: 'Retail & Parks',         sub: 'Retail + park within the project' },
-  { title: 'Green Concept',          sub: 'Total green space concept' },
-  { title: 'Wellbeing Design',       sub: 'Designed around wellbeing' },
-  { title: 'Golf Facing',            sub: '50% Golf-facing units' },
-  { title: 'Vastu Balconies',        sub: 'East/West facing balconies' },
-  { title: 'Fitness Lounge',         sub: 'World-class fitness facilities' },
-  { title: 'Premium Lifestyle',      sub: 'Ultra-luxury living experience' },
+  { title: 'Exclusive Living',       sub: 'Only 3 Towers | 288 Exclusive Residences' },
+  { title: 'Breathtaking Views',     sub: 'Breathtaking Golf Course & Green Views' },
+  { title: 'Low Density',            sub: 'Ultra-Low Density Development' },
+  { title: 'Superior Ventilation',   sub: 'East-West Oriented Homes for Superior Light & Ventilation' },
+  { title: 'Premium Township',       sub: 'Located within a 100-Acre Premium Golf Township' },
+  { title: 'Daily Conveniences',     sub: ' Luxury Retail & Daily Conveniences Within Walking Distance' },
+  { title: 'Rare Opportunity',       sub: 'A Rare Opportunity to Own in Final Residential Phase of Godrej Golf Links' },
 ]
 
 const Highlights = ({ setIsOpen }) => (
