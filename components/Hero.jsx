@@ -61,7 +61,7 @@ const Hero = () => {
 
       {/* ── Center-bottom text ── */}
       <div
-        className="absolute left-0 right-0 z-[2] text-left lg:text-center px-6 bottom-[155px] lg:bottom-[110px]"
+        className="absolute left-0 right-0 z-[2] text-left lg:text-center px-6 bottom-[90px] lg:bottom-[110px]"
         style={{ zIndex: 2 }}>
         {/* Project Tagline */}
         <div style={{ marginBottom: '14px' }}>
@@ -89,7 +89,7 @@ const Hero = () => {
           fontSize: 'clamp(22px, 3.2vw, 46px)',
           fontWeight: '800',
           color: '#ffffff',
-          margin: '0 0 16px',
+          margin: '0 0 8px',
           letterSpacing: '0.04em',
           textTransform: 'uppercase',
           textShadow: '0 2px 20px rgba(0,0,0,0.5)',
@@ -110,7 +110,7 @@ const Hero = () => {
           </div>
 
           {/* Mobile-only highlights */}
-          <div className="lg:hidden" style={{ marginTop: '10px' }}>
+          <div className="lg:hidden" style={{ marginTop: '8px' }}>
             <style>{`
               @keyframes slideInLeft {
                 from { opacity: 0; transform: translateX(-24px); }
@@ -118,37 +118,35 @@ const Hero = () => {
               }
             `}</style>
             {[
-              'Only 3 Towers | 288 Exclusive Residences',
-              'Breathtaking Golf Course & Green Views',
-              'Ultra-Low Density Development',
-              'East-West Oriented Homes for Superior Light & Ventilation',
-              'Located within a 100-Acre Premium Golf Township',
-              'Luxury Retail & Daily Conveniences Within Walking Distance',
-              'A Rare Opportunity to Own in the Final Residential Phase of Godrej Golf Links',
+              'Only 4 residences per floor',
+              'Private, secure, composed living',
+              'Just 5 minutes from Pari Chowk',
+              'Private entry with 60m grand frontage',
             ].map((text, i) => (
               <div key={i} style={{
                 display: 'flex', alignItems: 'center',
-                gap: '8px', marginBottom: '4px',
+                gap: '8px', marginBottom: '2px',
                 opacity: 0,
-                animation: `slideInLeft 0.4s ease forwards`,
-                animationDelay: `${0.3 + i * 0.2}s`,
+                animation: `slideInLeft 0.3s ease forwards`,
+                animationDelay: `${0.1 + i * 0.1}s`,
                 background: 'rgba(0,0,0,0.55)',
                 backdropFilter: 'blur(6px)',
-                padding: '7px 14px 7px 10px',
+                padding: '4px 10px 4px 8px',
                 borderRadius: '4px',
                 width: '100%',
               }}>
                 <span style={{
                   display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-                  width: '17px', height: '17px', background: '#ffffff',
+                  width: '14px', height: '14px', background: '#ffffff',
                   borderRadius: '50%', flexShrink: 0,
                 }}>
-                  <Check size={12} color="#000000" strokeWidth={3} />
+                  <Check size={10} color="#000000" strokeWidth={2.5} />
                 </span>
                 <span style={{
-                  fontFamily: F_SANS, fontSize: 'clamp(13px, 1.8vw, 16px)', color: '#ffffff',
+                  fontFamily: F_SANS, fontSize: 'clamp(11px, 1.6vw, 14px)', color: '#ffffff',
                   fontWeight: '500', letterSpacing: '0.02em',
                   textShadow: '0 1px 6px rgba(0,0,0,0.8)',
+                  lineHeight: 1.2,
                 }}>
                   {text}
                 </span>
