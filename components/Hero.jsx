@@ -118,7 +118,6 @@ const Hero = () => {
               }
             `}</style>
             {[
-              'Only 4 residences per floor',
               'Private, secure, composed living',
               'Just 5 minutes from Pari Chowk',
               'Private entry with 60m grand frontage',
