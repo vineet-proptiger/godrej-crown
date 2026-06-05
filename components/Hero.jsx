@@ -228,7 +228,7 @@ const Hero = () => {
         }}>
           {[
             'PRE - LAUNCH',
-            '3 & 4 BHK EOI STARTS AT 10 Lacs*',
+            '3 & 4 BHK EOI STARTS AT ₹ 10 Lacs*',
             '₹ 2.85 Cr* ONWARDS',
           ].map((text, i) => (
             <div
