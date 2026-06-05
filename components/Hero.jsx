@@ -195,7 +195,7 @@ const Hero = () => {
           {[
             '100 Acre Golf Ecosystem',
             '60m Wide Road Access',
-            '3.5 Acres | 3 Towers',
+            ' 3 Towers | 288 Exclusive Residences',
           ].map((point, i) => (
             <div key={i} style={{
               display: 'flex', alignItems: 'center', justifyContent: 'center',
