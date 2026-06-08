@@ -6,8 +6,8 @@ const F_SANS = 'var(--font-sans), Open Sans, sans-serif'
 
 const rows = [
   { type: '3 BHK', size: '1769 Sq.Ft.', price: '₹ 2.85 Cr*' },
-  { type: '3 BHK + Utility', size: '2392 Sq.Ft.', price: '₹ 4.20 Cr*' },
-  { type: '4 BHK + Utility', size: '3294 Sq.Ft.', price: '₹ 5.75 Cr*' },
+  { type: '3 BHK + Utility', size: '2392 Sq.Ft.', price: 'Ask For Price' },
+  { type: '4 BHK + Utility', size: '3294 Sq.Ft.', price: 'Ask For Price' },
 ]
 
 const Pricing = ({ setIsOpen }) => (
