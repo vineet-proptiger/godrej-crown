@@ -4,6 +4,7 @@ import localFont from 'next/font/local'
 import { GoogleTagManager } from '@next/third-parties/google'
 import Script from 'next/script'
 import { faviconImages } from '../lib/images'
+import { CITY_DISPLAY } from '../lib/config'
 
 const openSans = Open_Sans({
   subsets: ['latin'],
@@ -49,6 +50,7 @@ export default function RootLayout({ children }) {
       <body className={`${openSans.variable} ${montserrat.variable} ${cormorant.variable} ${nephilm.variable} font-sans text-dark antialiased`}>
         <Script id="gtag-init" strategy="beforeInteractive">
           {`window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({ 'city': '${CITY_DISPLAY === 'Greater Noida' ? 'Noida' : CITY_DISPLAY}' });
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());`}
         </Script>
