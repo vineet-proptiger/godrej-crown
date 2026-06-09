@@ -164,6 +164,7 @@
   html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    scroll-padding-top: 100px; /* Offset for fixed navbar */
   }
 
   body {
