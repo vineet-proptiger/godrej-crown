@@ -1,5 +1,4 @@
 'use client'
-import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { heroImages } from '../lib/images'
 import { Check } from 'lucide-react'
@@ -7,15 +6,7 @@ import { Check } from 'lucide-react'
 const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
 const F_SANS = 'var(--font-sans), Open Sans, sans-serif'
 
-const slides = [heroImages.banner, heroImages.banner2]
-
 const Hero = () => {
-  const [current, setCurrent] = useState(0)
-
-  useEffect(() => {
-    const t = setInterval(() => setCurrent(p => (p + 1) % slides.length), 5000)
-    return () => clearInterval(t)
-  }, [])
 
   return (
     <section
@@ -30,28 +21,36 @@ const Hero = () => {
         paddingBottom: 0,
       }}
     >
-      {/* ── Background image carousel ── */}
-      {slides.map((src, idx) => (
-        <div
-          key={idx}
-          style={{
-            position: 'absolute', inset: 0,
-            opacity: current === idx ? 1 : 0,
-            transition: 'opacity 1s ease',
-            zIndex: 0,
-          }}
-        >
-          <Image
-            src={src}
-            alt={`Godrej Crown Residences ${idx + 1}`}
-            fill
-            className="object-cover"
-            priority={idx === 0}
-            sizes="100vw"
-            quality={100}
-          />
-        </div>
-      ))}
+      {/* ── Background image ── */}
+      <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
+        <Image
+          src={heroImages.desktop}
+          alt="Godrej Crown Residences"
+          fill
+          className="hidden lg:block object-cover"
+          priority
+          sizes="100vw"
+          quality={100}
+        />
+        <Image
+          src={heroImages.tab}
+          alt="Godrej Crown Residences"
+          fill
+          className="hidden md:block lg:hidden object-cover"
+          priority
+          sizes="100vw"
+          quality={100}
+        />
+        <Image
+          src={heroImages.mobile}
+          alt="Godrej Crown Residences"
+          fill
+          className="block md:hidden object-cover"
+          priority
+          sizes="100vw"
+          quality={100}
+        />
+      </div>
 
       {/* ── Dark gradient overlay ── */}
       <div style={{
