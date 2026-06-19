@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import Image from 'next/image'
-import { heroImages } from '../lib/images'
+import { highlightsImage } from '../lib/images'
 
 const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
 const F_SANS = 'var(--font-sans), Open Sans, sans-serif'
@@ -27,7 +27,7 @@ const Highlights = ({ setIsOpen }) => (
         data-aos="fade-right"
       >
         <Image
-          src={heroImages.banner2}
+          src={highlightsImage}
           alt="Godrej Crown Residences Highlights"
           fill
           className="object-cover"

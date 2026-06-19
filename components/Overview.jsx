@@ -194,7 +194,7 @@ const Overview = () => (
 
           {/* Image */}
           <div style={{
-            position: 'relative', width: '100%', aspectRatio: '4/3',
+            position: 'relative', width: '100%', aspectRatio: '1/1',
             borderRadius: '12px', overflow: 'hidden',
             boxShadow: '0 16px 48px rgba(0,0,0,0.14)',
           }}>
