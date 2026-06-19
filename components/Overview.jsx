@@ -193,11 +193,14 @@ const Overview = () => (
         <div className="w-full lg:w-1/2 flex flex-col gap-6" data-aos="fade-left">
 
           {/* Image */}
-          <div style={{
-            position: 'relative', width: '100%', aspectRatio: '1/1',
-            borderRadius: '12px', overflow: 'hidden',
-            boxShadow: '0 16px 48px rgba(0,0,0,0.14)',
-          }}>
+          <div
+            className="w-full lg:w-[80%] mx-auto"
+            style={{
+              position: 'relative', aspectRatio: '1/1',
+              borderRadius: '12px', overflow: 'hidden',
+              boxShadow: '0 16px 48px rgba(0,0,0,0.14)',
+            }}
+          >
             <Image
               src={overviewImage} alt="Godrej Crown Residences" fill
               className="object-cover" sizes="(max-width:1024px) 100vw, 50vw" priority
