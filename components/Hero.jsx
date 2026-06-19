@@ -60,7 +60,7 @@ const Hero = () => {
 
       {/* ── Center-bottom text ── */}
       <div
-        className="absolute left-0 right-0 z-[2] text-left lg:text-center px-6 bottom-[90px] lg:bottom-[110px]"
+        className="absolute left-0 right-0 z-[2] text-center px-6 bottom-[180px] md:bottom-[90px] lg:bottom-[110px]"
         style={{ zIndex: 2 }}>
         {/* Project Tagline */}
         <div style={{ marginBottom: '14px' }}>
@@ -96,60 +96,17 @@ const Hero = () => {
           GODREJ CROWN RESIDENCES
         </h1>
 
-        {/* Location + Mobile highlights — shared left-aligned wrapper */}
-        <div style={{ display: 'block', textAlign: 'left' }}>
+        {/* Location — shared wrapper */}
+        <div style={{ display: 'block', textAlign: 'center' }}>
           {/* Location */}
-          <div className="location-strip" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+          <div className="location-strip" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px' }}>
             <span style={{
               fontFamily: F_SANS, fontSize: 'clamp(13px, 1.8vw, 16px)', color: '#ffffff',
               fontWeight: '600', letterSpacing: '0.06em', textTransform: 'uppercase',
+              textAlign: 'center', width: '100%'
             }}>
-              The Final Chapter of Luxury Living in a 100-Acre Golf course
+              Endless Greens, Limitless Luxury | Greater Noida Yamuna Expressway | Jewar Int. Airport
             </span>
-          </div>
-
-          {/* Mobile-only highlights */}
-          <div className="lg:hidden" style={{ marginTop: '8px' }}>
-            <style>{`
-              @keyframes slideInLeft {
-                from { opacity: 0; transform: translateX(-24px); }
-                to   { opacity: 1; transform: translateX(0); }
-              }
-            `}</style>
-            {[
-              'Private, secure, composed living',
-              'Just 5 minutes from Pari Chowk',
-              'Private entry with 60m grand frontage',
-            ].map((text, i) => (
-              <div key={i} style={{
-                display: 'flex', alignItems: 'center',
-                gap: '8px', marginBottom: '2px',
-                opacity: 0,
-                animation: `slideInLeft 0.3s ease forwards`,
-                animationDelay: `${0.1 + i * 0.1}s`,
-                background: 'rgba(0,0,0,0.55)',
-                backdropFilter: 'blur(6px)',
-                padding: '4px 10px 4px 8px',
-                borderRadius: '4px',
-                width: '100%',
-              }}>
-                <span style={{
-                  display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-                  width: '14px', height: '14px', background: '#ffffff',
-                  borderRadius: '50%', flexShrink: 0,
-                }}>
-                  <Check size={10} color="#000000" strokeWidth={2.5} />
-                </span>
-                <span style={{
-                  fontFamily: F_SANS, fontSize: 'clamp(11px, 1.6vw, 14px)', color: '#ffffff',
-                  fontWeight: '500', letterSpacing: '0.02em',
-                  textShadow: '0 1px 6px rgba(0,0,0,0.8)',
-                  lineHeight: 1.2,
-                }}>
-                  {text}
-                </span>
-              </div>
-            ))}
           </div>
         </div>
       </div>
@@ -187,11 +144,12 @@ const Hero = () => {
           borderTop: '1px solid rgba(196,149,42,0.3)',
           maxWidth: '1200px',
           margin: '0 auto',
+          marginBottom: '3px',
         }}>
           {[
-            '100 Acre Golf Ecosystem',
+            '50% Golf Course Facing Units',
             '60m Wide Road Access',
-            ' 3 Towers | 288 Exclusive Residences',
+            '100 Acre Golf Residences',
           ].map((point, i) => (
             <div key={i} style={{
               display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -223,9 +181,9 @@ const Hero = () => {
           maxWidth: '1200px',
         }}>
           {[
-            'PRE - LAUNCH',
-            '3 & 4 BHK EOI STARTS AT ₹ 10 Lacs*',
-            '₹ 2.85 Cr* ONWARDS',
+            'PRE - LAUNCH EXCLUSIVE RESIDENCES',
+            'EOI AMOUNT STARTS AT ₹ 10 Lacs*',
+            'Starting From ₹ 2.85 Cr*',
           ].map((text, i) => (
             <div
               key={i}

@@ -13,7 +13,7 @@ const highlights = [
   { title: 'Superior Ventilation',   sub: 'East-West Oriented Homes for Superior Light & Ventilation' },
   { title: 'Premium Township',       sub: 'Located within a 100-Acre Premium Golf Township' },
   { title: 'Daily Conveniences',     sub: ' Luxury Retail & Daily Conveniences Within Walking Distance' },
-  { title: 'Rare Opportunity',       sub: 'A Rare Opportunity to Own in Final Residential Phase of Godrej Golf Links' },
+  // { title: 'Rare Opportunity',       sub: 'A Rare Opportunity to Own in Final Residential Phase of Godrej Golf Links' },
 ]
 
 const Highlights = ({ setIsOpen }) => (
