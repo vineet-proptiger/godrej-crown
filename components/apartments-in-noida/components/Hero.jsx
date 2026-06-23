@@ -198,15 +198,16 @@ export default function Hero({ setIsOpen }) {
                 { icon: '🚗', label: 'Site\nVisit' },
                 { icon: '🏷️', label: 'Best\nPrice' },
               ].map((b, i) => (
-                <div key={i} style={{
+                <div key={i} className="cursor-pointer transition-all duration-300 hover:bg-white/10 hover:border-white/30 hover:-translate-y-1" style={{
                   flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '3px',
                   padding: '14px 8px',
-                  border: '1px solid rgba(255,255,255,0.07)',
+                  border: '1px solid rgba(255,255,255,0.15)',
                   borderRadius: '6px',
-                  background: 'rgba(255,255,255,0.04)',
+                  background: 'rgba(255,255,255,0.08)',
+                  boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
                 }}>
                   <span style={{ fontSize: '13px', lineHeight: 1 }}>{b.icon}</span>
-                  <span style={{ fontFamily: F_SANS, fontSize: '9px', fontWeight: 600, letterSpacing: '0.06em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.7)', textAlign: 'center', lineHeight: 1.2, whiteSpace: 'pre-line' }}>{b.label}</span>
+                  <span style={{ fontFamily: F_SANS, fontSize: '9px', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#ffffff', textAlign: 'center', lineHeight: 1.2, whiteSpace: 'pre-line' }}>{b.label}</span>
                 </div>
               ))}
             </div>
