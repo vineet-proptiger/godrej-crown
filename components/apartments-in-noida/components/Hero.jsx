@@ -138,7 +138,7 @@ export default function Hero({ setIsOpen }) {
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px' }}>
               <span style={{ display: 'block', width: '28px', height: '1px', background: 'var(--color-gold)', opacity: 0.8 }} />
-              <span style={{ fontFamily: F_SANS, fontSize: '10px', fontWeight: 600, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--color-gold)' }}>
+              <span style={{ fontFamily: F_SANS, fontSize: '10px', fontWeight: 600, letterSpacing: '0.22em', textTransform: 'uppercase', color: '#4ade80' }}>
                 Endless Greens, Limitless Luxury
               </span>
             </div>
@@ -149,6 +149,22 @@ export default function Hero({ setIsOpen }) {
             }}>
               Godrej Crown <span style={{ color: '#ffffff' }}>Residences</span>
             </h1>
+            <p style={{
+              fontFamily: F_SANS,
+              fontSize: 'clamp(14px, 1.2vw, 17px)',
+              color: 'rgba(255,255,255,0.85)',
+              marginTop: '10px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '6px',
+              letterSpacing: '0.03em'
+            }}>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              Sector 27, Pari Chowk, Greater Noida
+            </p>
           </div>
 
           {/* Pip dots */}
@@ -185,9 +201,9 @@ export default function Hero({ setIsOpen }) {
           }}>
             <p style={{ fontFamily: F_SANS, fontSize: '13px', lineHeight: 1.6, color: '#ffffff', fontWeight: 300 }}>
               A thoughtfully crafted residential development by{' '}
-              <span style={{ color: 'var(--color-gold)', fontWeight: 600 }}>Godrej Properties</span> — endless greens, limitless luxury and
+              <span style={{ color: '#4ade80', fontWeight: 600 }}>Godrej Properties</span> — endless greens, limitless luxury and
               apartments at{' '}
-              <span style={{ color: 'var(--color-gold)', fontWeight: 600 }}>Greater Noida Yamuna Expressway</span>.
+              <span style={{ color: '#4ade80', fontWeight: 600 }}>Greater Noida Yamuna Expressway</span>.
             </p>
 
             {/* Trust badges */}
@@ -247,10 +263,10 @@ export default function Hero({ setIsOpen }) {
               Project Highlights
             </p>
             {[
-              'Endless Greens, Limitless Luxury',
-              'Greater Noida Yamuna Expressway',
-              'Jewar Int. Airport',
-              'EOI AMOUNT STARTS AT ₹ 10 Lacs*',
+              '18-Acre Dedicated 9-Hole Golf Course.',
+              '5000+ Trees Within The Development',
+              'Adjacent To A 10-Acre Viva Terra Landscape.',
+              '90,000+ Sq. Ft. Master Clubhouse With Amenities',
             ].map((item, i) => (
               <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <span style={{ width: '4px', height: '4px', borderRadius: '50%', background: 'var(--color-gold)', flexShrink: 0, opacity: 0.8 }} />
@@ -266,14 +282,14 @@ export default function Hero({ setIsOpen }) {
             display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '20px',
           }}>
             <div style={{ textAlign: 'center' }}>
-              <p style={{ fontFamily: F_SANS, fontSize: '14.5px', fontWeight: 600, color: '#ffffff', letterSpacing: '0.06em', marginBottom: '2px' }}>
-                PRE - LAUNCH EXCLUSIVE RESIDENCES
+              <p style={{ fontFamily: F_SANS, fontSize: '15px', fontWeight: 700, color: '#FFD700', letterSpacing: '0.05em', marginBottom: '6px' }}>
+                EOI Window Now Open With
               </p>
-              <p style={{ fontFamily: F_SANS, fontSize: '11px', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.7)', marginBottom: '4px' }}>
-                Starting From
+              <p style={{ fontFamily: F_SANS, fontSize: '20px', fontWeight: 700, color: '#ffffff', marginBottom: '8px' }}>
+                Priority Allotment
               </p>
-              <p className="blink-price" style={{ fontFamily: F_JOST, fontSize: '32px', fontWeight: 600, color: '#ffffff', lineHeight: 1 }}>
-                ₹ 2.85 Cr*
+              <p className="blink-price" style={{ fontFamily: F_JOST, fontSize: '26px', fontWeight: 700, color: '#ffffff', lineHeight: 1 }}>
+                ₹10 Lacs*
               </p>
             </div>
 
