@@ -165,20 +165,6 @@ export default function Hero({ setIsOpen }) {
               Sector 27, Pari Chowk, Greater Noida
             </p>
           </div>
-
-          {/* Pip dots */}
-          <div style={{ position: 'absolute', bottom: '20px', right: '40px', zIndex: 6, display: 'flex', gap: '7px' }}>
-            {slides.map((_, idx) => (
-              <button key={idx} onClick={() => goTo(idx)} style={{
-                height: '2px', border: 'none', borderRadius: '1px', cursor: 'pointer', padding: 0,
-                width: cur === idx ? '40px' : '22px',
-                background: cur === idx ? 'var(--color-gold)' : 'rgba(255,255,255,0.3)',
-                transition: 'all 0.4s ease',
-              }} />
-            ))}
-          </div>
-
-          {/* Progress bar removed */}
         </div>
 
         {/* ══════════════════════════════
