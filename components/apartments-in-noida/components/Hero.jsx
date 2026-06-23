@@ -131,35 +131,34 @@ export default function Hero({ setIsOpen }) {
           </nav>
 
           {/* Project title overlaid on image */}
-          <div style={{
+          <div className="px-5 pb-5 sm:px-10 sm:pb-[22px]" style={{
             position: 'absolute', bottom: 0, left: 0, zIndex: 5,
-            padding: '0 40px 22px',
             animation: 'heroRiseUp 0.9s 0.3s cubic-bezier(0.16,1,0.3,1) both',
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px' }}>
               <span style={{ display: 'block', width: '28px', height: '1px', background: 'var(--color-gold)', opacity: 0.8 }} />
-              <span style={{ fontFamily: F_SANS, fontSize: '10px', fontWeight: 600, letterSpacing: '0.22em', textTransform: 'uppercase', color: '#4ade80' }}>
+              {/* <span style={{ fontFamily: F_SANS, fontSize: '10px', fontWeight: 600, letterSpacing: '0.22em', textTransform: 'uppercase', color: '#4ade80' }}>
                 Endless Greens, Limitless Luxury
-              </span>
+              </span> */}
             </div>
             <h1 style={{
               fontFamily: F_JOST,
-              fontSize: 'clamp(28px, 3.4vw, 52px)',
+              fontSize: 'clamp(22px, 3.4vw, 52px)',
               fontWeight: 800, color: '#fff', lineHeight: 1.05, letterSpacing: '-0.02em',
             }}>
               Godrej Crown <span style={{ color: '#ffffff' }}>Residences</span>
             </h1>
             <p style={{
               fontFamily: F_SANS,
-              fontSize: 'clamp(14px, 1.2vw, 17px)',
+              fontSize: 'clamp(11px, 1.2vw, 17px)',
               color: 'rgba(255,255,255,0.85)',
-              marginTop: '10px',
+              marginTop: '6px',
               display: 'flex',
               alignItems: 'center',
-              gap: '6px',
+              gap: '5px',
               letterSpacing: '0.03em'
             }}>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                 <circle cx="12" cy="10" r="3"></circle>
               </svg>
