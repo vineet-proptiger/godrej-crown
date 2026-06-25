@@ -483,6 +483,51 @@
   box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
 }
 
+.sticky-bottom-bar > a,
+.sticky-bottom-bar > button {
+  transition: all 0.25s ease;
+}
+
+.sticky-btn-call {
+  background: #1a1a1a;
+  border-right: 1px solid #333;
+  color: #ffffff;
+}
+.sticky-btn-call:hover, .sticky-btn-call:active {
+  background: #ffffff !important;
+  color: #1a1a1a !important;
+  border-right-color: #e5e5e5;
+}
+.sticky-btn-call:hover svg, .sticky-btn-call:active svg {
+  fill: #1a1a1a !important;
+}
+
+.sticky-btn-wa {
+  background: #25D366;
+  border-right: 1px solid #1fa854;
+  color: #ffffff;
+}
+.sticky-btn-wa:hover, .sticky-btn-wa:active {
+  background: #ffffff !important;
+  color: #25D366 !important;
+  border-right-color: #e5e5e5;
+}
+.sticky-btn-wa:hover svg, .sticky-btn-wa:active svg {
+  fill: #25D366 !important;
+}
+
+.sticky-btn-enquire {
+  background: #C4952A;
+  color: #ffffff;
+}
+.sticky-btn-enquire:hover, .sticky-btn-enquire:active {
+  background: #ffffff !important;
+  color: #C4952A !important;
+}
+.sticky-btn-enquire:hover svg, .sticky-btn-enquire:active svg {
+  stroke: #C4952A !important;
+}
+
 .sticky-bottom-bar a:first-child svg {
   animation: phoneRing 1.8s ease-in-out infinite;
   transform-origin: center;

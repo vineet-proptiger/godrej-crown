@@ -60,8 +60,7 @@ export default function NewLaunch() {
         <a
           id="mobile-call"
           href="tel:+919718344024"
-          className="flex-1 flex flex-col items-center justify-center py-2 gap-1 text-white"
-          style={{ background: '#1a1a1a', borderRight: '1px solid #333' }}
+          className="flex-1 flex flex-col items-center justify-center py-2 gap-1 text-white sticky-btn-call"
         >
           <svg width="20" height="20" fill="#ffffff" viewBox="0 0 24 24">
             <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
@@ -70,8 +69,7 @@ export default function NewLaunch() {
         </a>
         <button
           onClick={() => setIsOpen(true)}
-          className="flex-1 flex flex-col items-center justify-center py-2 gap-1 text-white"
-          style={{ background: '#C4952A' }}
+          className="flex-1 flex flex-col items-center justify-center py-2 gap-1 text-white sticky-btn-enquire"
         >
           <svg width="22" height="22" fill="none" stroke="#ffffff" strokeWidth="2" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round"
