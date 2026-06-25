@@ -483,7 +483,7 @@
   box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
 }
 
-.sticky-bottom-bar a:first-child span {
+.sticky-bottom-bar a:first-child svg {
   animation: phoneRing 1.8s ease-in-out infinite;
   transform-origin: center;
 }
