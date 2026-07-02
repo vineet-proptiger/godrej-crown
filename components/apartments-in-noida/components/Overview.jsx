@@ -11,9 +11,7 @@ const F_SANS = 'var(--font-sans), Open Sans, sans-serif'
 const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
 const F_SERIF = 'var(--font-serif), Cormorant Garamond, serif'
 
-const PREVIEW_TEXT = `Godrej Crown Residences — The Final Chapter of Luxury Living in a 100-Acre Golf course. An exclusive, ultra-low density development featuring only 3 towers and 288 exclusive residences. Surrounded by an expansive 9-hole executive golf course, the community offers wide internal roads, abundant green spaces, and well-planned infrastructure—creating a perfect balance of modern living and a serene golf-facing lifestyle.`
 
-const MORE_TEXT = ` Strategically located, the project ensures seamless connectivity via the Yamuna Expressway and Noida–Greater Noida Expressway. Luxury retail and daily conveniences are within walking distance, making it well-connected to key destinations.`
 
 const OPEN_VIEWS = [
   { dir: '5m', label: 'NH-48', sub: '5 Mins Away' },
@@ -194,6 +192,8 @@ const EarlyForm = () => {
 }
 
 const Overview = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
     <section id="overview" className="!pt-1 !pb-4 sm:!py-10" style={{
       background: '#f8f9fa',
@@ -269,12 +269,28 @@ const Overview = () => {
               boxShadow: '0 4px 20px rgba(0,0,0,0.06)', border: '1px solid #f0f0f0',
               display: 'flex', flexDirection: 'column', gap: '18px', width: '100%',
             }}>
-              {/* Description */}
               <p style={{
                 color: '#374151', fontFamily: F_SANS, lineHeight: 1.85,
                 fontSize: '14px', margin: 0, textAlign: 'justify',
               }}>
-                {PREVIEW_TEXT}{MORE_TEXT}
+                <strong>*Godrej Crown Residences Noida Extension*</strong> — The Final Chapter of Luxury Living in a 100-Acre Golf Course Township. An exclusive, ultra-low density development featuring only 3 iconic towers and 288 premium residences, <strong>*Godrej Crown Residences*</strong> redefines luxury living in <strong>*Noida Extension. Surrounded by an expansive 9-hole executive golf course, the community offers wide internal roads, abundant green spaces, and thoughtfully planned infrastructure—creating the perfect balance of modern urban living and a serene golf-facing lifestyle. Strategically located with seamless connectivity to the **Yamuna Expressway, **Noida–Greater Noida Expressway, and the upcoming **Jewar International Airport, the project offers exceptional convenience and strong investment potential.</strong>
+                {isExpanded ? (
+                  <>
+                    <strong> Luxury retail, entertainment hubs, educational institutions, healthcare facilities, and daily essentials are all within walking distance or a short drive. As one of the most anticipated **Godrej new projects*</strong> in NCR, Godrej Crown Residences presents an unmatched opportunity to own a premium home in one of the region's fastest-growing destinations.
+                  </>
+                ) : (
+                  <span>... </span>
+                )}
+                <button
+                  onClick={() => setIsExpanded(!isExpanded)}
+                  style={{
+                    color: 'var(--color-gold)', fontWeight: '600',
+                    background: 'none', border: 'none', padding: 0, cursor: 'pointer',
+                    fontFamily: F_SANS, fontSize: '14px'
+                  }}
+                >
+                  {isExpanded ? 'Read Less' : 'Read More'}
+                </button>
               </p>
 
             </div>

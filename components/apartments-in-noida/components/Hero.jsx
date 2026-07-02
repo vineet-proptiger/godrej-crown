@@ -185,10 +185,8 @@ export default function Hero({ setIsOpen }) {
             borderRight: '1px solid rgba(255,255,255,0.06)',
           }}>
             <p style={{ fontFamily: F_SANS, fontSize: '13px', lineHeight: 1.6, color: '#ffffff', fontWeight: 300 }}>
-              A thoughtfully crafted residential development by{' '}
-              <span style={{ color: '#4ade80', fontWeight: 600 }}>Godrej Properties</span> — endless greens, limitless luxury and
-              apartments at{' '}
-              <span style={{ color: '#4ade80', fontWeight: 600 }}>Greater Noida Yamuna Expressway</span>.
+              <span style={{ color: '#4ade80', fontWeight: 600 }}>Godrej Crown Residences Noida Extension</span> by{' '}
+              <span style={{ color: '#4ade80', fontWeight: 600 }}>Godrej Properties</span>—endless greens, limitless luxury, and premium golf-facing apartments.
             </p>
 
             {/* Trust badges */}
